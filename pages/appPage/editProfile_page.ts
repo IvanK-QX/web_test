@@ -15,7 +15,7 @@ export class AppEditProfilePage {
         this.nameField = page.locator('[placeholder="Name"]')
         this.bioField = page.locator('[placeholder="I am a singer"]')
         this.dateField = page.locator('input.ui-datepicker__input')
-        this.saveBtn = page.getByRole('button', { name: 'Save' })
+        this.saveBtn = page.locator('//*[contains(text(),"Save")]')
         this.successPoup = page.locator('.success')
     }
 

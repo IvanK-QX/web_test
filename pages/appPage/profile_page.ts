@@ -17,16 +17,16 @@ export class AppProfilePage {
 
     constructor(page: Page) {
         this.page = page 
-        this.buyCoinsBtn = page.getByRole('button', { name: 'Buy Coins' })
-        this.startStreamBtn = page.getByRole('button', { name: 'Start Stream' })
+        this.buyCoinsBtn = page.locator('//*[contains(text(),"Buy Coins")]')
+        this.startStreamBtn = page.locator('//*[text()=" Start Stream "]')
         this.folowerCounters = page.getByText('0 followers')
         this.coinShopTitle = page.locator('span.coins-shop-modal__title-text')
         this.stremTitleInputField = page.locator('[placeholder="Stream title"]')
         this.kebabMenuBtn = page.locator('div.context-menu')
         this.kebabMenuBody = page.locator('div.context-menu__body')
         this.editProfileTitle = page.locator('h2.profile-edit__title')
-        this.editProfileBtn = page.getByRole('button', { name: 'Edit Profile' })
-        this.redeemCashBtn = page.getByRole('button', { name: 'Redeem Cash' })
+        this.editProfileBtn = page.locator('//*[contains(text(),"Edit Profile")]')
+        this.redeemCashBtn = page.locator('//*[contains(text(),"Redeem Cash")]')
         this.redemCashTitle = page.locator('span.redeem-card__title-text')
     }
 
