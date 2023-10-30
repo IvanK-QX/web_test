@@ -8,6 +8,7 @@ export class AppEditProfilePage {
     dateField: Locator
     saveBtn: Locator
     successPoup: Locator
+    previosArrowBtn: Locator
 
     constructor(page: Page) {
         this.page = page 
@@ -33,7 +34,7 @@ export class AppEditProfilePage {
 
     async selectDate() {
         await this.dateField.hover()
-        await this.page.getByRole('button', { name: 'Saturday, Oct 1, 2005' }).click();
+        await this.page.locator('div.day-1.on-top').click();
     }
 
     async clickSaveBtn() {

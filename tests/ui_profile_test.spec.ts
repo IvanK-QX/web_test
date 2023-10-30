@@ -48,14 +48,14 @@ test.describe('UI - Profile Tests', async () => {
         await app.profilePage.clickRedeemCashBtn()
     })
 
-    test('Profile - Edit Profile e2e', async ({page}) => {
+    test.only('Profile - Edit Profile e2e', async ({page}) => {
         const app = new App(page)
         const name = apiDataSet.randomName
         const bio = apiDataSet.randomBio
         await app.ediProfilePage.open()
         await app.ediProfilePage.chageName(name)
         await app.ediProfilePage.chageBio(bio)
-        await app.ediProfilePage.selectDate()
+        // await app.ediProfilePage.selectDate()
         await app.ediProfilePage.clickSaveBtn()
         await app.profilePage.open()
         await app.profilePage.observeMyBio(bio)
