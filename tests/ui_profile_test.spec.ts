@@ -48,7 +48,7 @@ test.describe('UI - Profile Tests', async () => {
         await app.profilePage.clickRedeemCashBtn()
     })
 
-    test.only('Profile - Edit Profile e2e', async ({page}) => {
+    test('Profile - Edit Profile e2e', async ({page}) => {
         const app = new App(page)
         const name = apiDataSet.randomName
         const bio = apiDataSet.randomBio
