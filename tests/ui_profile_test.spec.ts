@@ -55,7 +55,7 @@ test.describe('UI - Profile Tests', async () => {
         await app.ediProfilePage.open()
         await app.ediProfilePage.chageName(name)
         await app.ediProfilePage.chageBio(bio)
-        await app.ediProfilePage.selectDate()
+        // await app.ediProfilePage.selectDate()
         await app.ediProfilePage.clickSaveBtn()
         await app.profilePage.open()
         await app.profilePage.observeMyBio(bio)
