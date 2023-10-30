@@ -39,7 +39,7 @@ export class AppEditProfilePage {
 
     async clickSaveBtn() {
         await this.saveBtn.click();
-        await this.successPoup.waitFor()
+        await this.successPoup.waitFor({state: "attached"})
     }
 
 
