@@ -18,6 +18,7 @@ test.describe('UI Tests', async () => {
         watcher = await watcherPage.loginPage.apiLogin(apiUrl.qaEnvUrl)
         await api.followingPage.follow(apiUrl.qaEnvUrl, watcher.userToken, streamer.id)
         console.log(streamer.id)
+        console.log(watcher.id)
     })
 
     test.afterEach(async () => {
