@@ -35,7 +35,7 @@ jobs:
       
       - name: Run Playwright Tests 
         run: |
-          xvfb-run npx playwright test
+          npx playwright test
 
       - uses: actions/upload-artifact@v3
         with:
