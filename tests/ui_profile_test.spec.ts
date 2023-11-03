@@ -13,11 +13,11 @@ test.describe('UI - Profile Tests', async () => {
         await app.profilePage.open()
     })
 
-    test.afterEach(async () => {
-        const apiContext = await request.newContext()
-        const api = new Api(apiContext)
-        await api.deleteAccountPage.deleteAccount(apiUrl.qaEnvUrl, user.userToken)
-    })
+    // test.afterEach(async () => {
+    //     const apiContext = await request.newContext()
+    //     const api = new Api(apiContext)
+    //     await api.deleteAccountPage.deleteAccount(apiUrl.qaEnvUrl, user.userToken)
+    // })
 
     test('Profile - My Info', async ({page}) => {
         const app = new App(page)
