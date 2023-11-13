@@ -10,7 +10,7 @@ export class AppBlockedPage {
 
     async open() {
         await this.page.goto(`${apiUrl.qaUiUrl}/blocked`)
-        await this.page.waitForLoadState('networkidle')
+        // await this.page.waitForLoadState('networkidle')
     }
 
     async oberveBlockedUser(userName: string) {
