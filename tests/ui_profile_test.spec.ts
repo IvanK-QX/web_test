@@ -1,8 +1,7 @@
-import { request, test } from "@playwright/test";
+import { test } from "@playwright/test";
 import { apiUrl } from "../utils/apiUrl";
 import { apiDataSet } from "../utils/dataSet";
 import { App } from '../pages/App'
-import { Api } from "../pages/Api";
 
 let user
 
