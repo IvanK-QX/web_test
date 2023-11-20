@@ -1,4 +1,4 @@
-import { expect, request, test } from "@playwright/test";
+import { request, test } from "@playwright/test";
 import { apiUrl } from "../utils/apiUrl";
 import { apiDataSet } from "../utils/dataSet";
 import { App } from '../pages/App'
