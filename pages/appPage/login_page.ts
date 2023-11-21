@@ -2,7 +2,6 @@ import { APIRequestContext, request, Page } from "@playwright/test"
 import { Api } from "../Api"
 import { apiUrl } from "../../utils/apiUrl"
 import { apiDataSet } from "../../utils/dataSet"
-
 export class AppLoginPage {
     apiContext: APIRequestContext
     page: Page

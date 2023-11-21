@@ -36,6 +36,9 @@ jobs:
       - name: Run Playwright Tests 
         run: |
           npx playwright test
+        env:
+          SLACK_TOKEN: ${{secrets.SLACK_TOKEN}}
+          SLACK_COOKIE: ${{secrets.SLACK_COOKIE}}
 
       - uses: actions/upload-artifact@v3
         with:
@@ -65,7 +68,10 @@ jobs:
       - name: Deploy report to Github Pages
         if: always()
         uses: peaceiris/actions-gh-pages@v2
+        
+        
         env:
           PERSONAL_TOKEN: ${{secrets.GITHUB_TOKEN}}
           PUBLISH_BRANCH: gh-pages
           PUBLISH_DIR: allure-history
+          
