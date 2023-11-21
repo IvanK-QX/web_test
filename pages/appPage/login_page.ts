@@ -32,11 +32,13 @@ export class AppLoginPage {
           `window.localStorage.setItem('lastGiftListRequestDate', '${date}')`
         )
         const userToken = user.userToken
-        const id = user.id,
-        name = user.name
+        const id = user.id
+        const name = user.name
+        const humanReadableId = user.humanReadableId
+        await api.slackPage.addCoins(humanReadableId)
         await this.page.goto(`${apiUrl.qaUiUrl}/edit`)
         await this.page.waitForTimeout(500)
-        return { userToken , id , name}
+        return { userToken , id , name, humanReadableId}
     }
        
 }

@@ -39,6 +39,7 @@ test.describe('UI - Ctat Page With Two Users', async() => {
         await api.followingPage.follow(apiUrl.qaEnvUrl, watcher.userToken, user.id)
         await api.followingPage.follow(apiUrl.qaEnvUrl, user.userToken, watcher.id)
         await app.chatPage.open()
+        await api.slackPage.addCoins(user.humanReadableId)
     })
     test('Chats - Unblock Chat By Followings', async ({page, browser}) => {
         const app = new App(page)
