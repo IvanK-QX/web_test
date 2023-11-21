@@ -20,6 +20,7 @@ import { ApiOtherPage } from "./apiPages/other_functionality_page"
 import { Api3002Page } from "./apiPages/3002_page"
 import { ApiNegativeFlowTemplate } from "./apiPagesNegFlow/negativeFlowTemplate_page"
 import { ApiMessage3003Page } from "./apiPages/message_page"
+import { ApiSlackPage } from "./apiPages/slack_page"
 
 export class Api {
     apiContext: APIRequestContext
@@ -44,6 +45,7 @@ export class Api {
     agora3002Page: Api3002Page
     negativeFlowTemplate: ApiNegativeFlowTemplate
     messagePage: ApiMessage3003Page
+    slackPage: ApiSlackPage
 
     constructor(apiContext: APIRequestContext) {
         this.apiContext = apiContext
@@ -68,5 +70,6 @@ export class Api {
         this.agora3002Page = new Api3002Page(apiContext)
         this.negativeFlowTemplate = new ApiNegativeFlowTemplate(apiContext)
         this.messagePage = new ApiMessage3003Page(apiContext)
+        this.slackPage = new ApiSlackPage(apiContext)
     }
 }

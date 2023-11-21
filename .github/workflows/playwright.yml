@@ -34,6 +34,9 @@ jobs:
           npx playwright install
       
       - name: Run Playwright Tests 
+        env:
+          SLACK_TOKEN: ${{secrets.SLACK_TOKEN}}
+          SLACK_COOKIE: ${{secrets.SLACK_COOKIE}}
         run: |
           npx playwright test
 
@@ -69,3 +72,4 @@ jobs:
           PERSONAL_TOKEN: ${{secrets.GITHUB_TOKEN}}
           PUBLISH_BRANCH: gh-pages
           PUBLISH_DIR: allure-history
+          
