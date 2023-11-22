@@ -36,8 +36,7 @@ export class AppMainPage {
     }
 
     async validateCorrectSearch(userName = '50cent') {
-        await this.page.locator('div.user-info-card__content--name', {hasText: `userName`}).waitFor()
+        await this.page.locator('div.user-info-card__content--name', {hasText: `${userName}`}).waitFor()
     }
-
 
 }
