@@ -29,7 +29,7 @@ test.describe('UI - Chat Tests', async () => {
 
 })
 
-test.describe('UI - Ctat Page With Two Users', async() => {
+test.describe('UI - Chat Page With Two Users', async() => {
     test.beforeEach(async ({page}) => {
         const apiContext = await request.newContext()
         const app = new App(page)
@@ -41,6 +41,7 @@ test.describe('UI - Ctat Page With Two Users', async() => {
         await app.chatPage.open()
         await api.slackPage.addCoins(user.humanReadableId)
     })
+
     test('Chats - Unblock Chat By Followings', async ({page, browser}) => {
         const app = new App(page)
         await app.chatPage.startChetWithSpecificUser(watcher.name)
