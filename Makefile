@@ -15,3 +15,9 @@ test:
 ##############################
 report:
 	npm run allure:generate-open
+
+##############################
+# Run Prettier
+##############################
+prettier:
+	px prettier . --write

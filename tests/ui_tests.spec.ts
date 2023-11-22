@@ -1,15 +1,15 @@
-import { request, test } from "@playwright/test";
-import { apiUrl } from "../utils/apiUrl";
-import { apiDataSet } from "../utils/dataSet";
+import { request, test } from '@playwright/test'
+import { apiUrl } from '../utils/apiUrl'
+import { apiDataSet } from '../utils/dataSet'
 import { App } from '../pages/App'
-import { Api } from "../pages/Api";
+import { Api } from '../pages/Api'
 
 let streamer, watcher, newPage, watcherPage
 
 test.describe('UI Tests', async () => {
-    test.beforeEach(async ({page, browser}) => {
+    test.beforeEach(async ({ page, browser }) => {
         const apiContext = await request.newContext()
-        const contetext = await browser.newContext();
+        const contetext = await browser.newContext()
         newPage = await contetext.newPage()
         const app = new App(page)
         const api = new Api(apiContext)
@@ -26,7 +26,7 @@ test.describe('UI Tests', async () => {
     //     await api.deleteAccountPage.deleteAccount(apiUrl.qaEnvUrl, watcher.userToken)
     // })
 
-    test('Star sand Join Stream',async ({page}) => {
+    test('Star sand Join Stream', async ({ page }) => {
         const app = new App(page)
         const watcherPage = new App(newPage)
         await app.ediProfilePage.open()
@@ -43,7 +43,7 @@ test.describe('UI Tests', async () => {
         await watcherPage.streamPage.waitForStreamLoadingWatcher()
         await watcherPage.streamPage.sendMessageInStreamChat(apiDataSet.uiStreamMessage)
         await app.streamPage.observeReceivedMessage(apiDataSet.uiStreamMessage)
-        await watcherPage.streamPage.sendMessageInStreamChat("bitch")
+        await watcherPage.streamPage.sendMessageInStreamChat('bitch')
         await watcherPage.streamPage.observeModeratorMessage()
         await app.streamPage.openWatchersList()
         await app.streamPage.clickFollowOnWatchersList()
@@ -58,7 +58,7 @@ test.describe('UI Tests', async () => {
         await watcherPage.chatPage.observeNewMessage('hello')
         await watcherPage.chatPage.sendMessage('bitch')
         await watcherPage.chatPage.observeNewMessage('bitch')
-      //   await watcherPage.chatPage.sendObusiveWord('bitch')
+        //   await watcherPage.chatPage.sendObusiveWord('bitch')
         await app.chatPage.observeNewMessage('bitch')
         await app.chatPage.blockUser()
         await app.chatPage.doNotSeeChatForSpecificUser(watcher.name)
@@ -66,8 +66,5 @@ test.describe('UI Tests', async () => {
         await app.blockedPage.oberveBlockedUser(watcher.name)
         await app.blockedPage.unblockUser(watcher.name)
         await app.blockedPage.doNotOberveBlockedUser(watcher.name)
-  
-      })
+    })
 })
-
-

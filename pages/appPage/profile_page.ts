@@ -1,5 +1,5 @@
-import { Locator, Page } from "@playwright/test"
-import { apiUrl } from "../../utils/apiUrl"
+import { Locator, Page } from '@playwright/test'
+import { apiUrl } from '../../utils/apiUrl'
 
 export class AppProfilePage {
     page: Page
@@ -16,7 +16,7 @@ export class AppProfilePage {
     redemCashTitle: Locator
 
     constructor(page: Page) {
-        this.page = page 
+        this.page = page
         this.buyCoinsBtn = page.locator('//*[contains(text(),"Buy Coins")]')
         this.startStreamBtn = page.locator('//*[text()=" Start Stream "]')
         this.folowerCounters = page.getByText('0 followers')
@@ -46,7 +46,7 @@ export class AppProfilePage {
     async observePersonalInfo(userName: string) {
         await this.folowerCounters.waitFor()
         await this.page.getByRole('img', { name: `Avatar ${userName} picture` }).click()
-        await this.page.locator('p.profile-info__name', {hasText: `${userName}`}).waitFor()
+        await this.page.locator('p.profile-info__name', { hasText: `${userName}` }).waitFor()
     }
 
     async clickBuyCoinsBtn() {
@@ -75,14 +75,6 @@ export class AppProfilePage {
     }
 
     async observeMyBio(bio: string) {
-        await this.page.locator('p.profile-info__description-text', {hasText: `${bio}`}).waitFor()
+        await this.page.locator('p.profile-info__description-text', { hasText: `${bio}` }).waitFor()
     }
-
-    
-
-    
-
-        
-
-
 }

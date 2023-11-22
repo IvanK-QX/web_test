@@ -1,23 +1,20 @@
 export class NotificationsContentPayloads {
-
-    static notificationsContentCreate(contentTitle: string, contentText: string){
+    static notificationsContentCreate(contentTitle: string, contentText: string) {
         const query = {
-            "type": "giftReceived",
-            "title": `${contentTitle}`,
-            "text": `${contentText}`
-          }
+            type: 'giftReceived',
+            title: `${contentTitle}`,
+            text: `${contentText}`,
+        }
         return query
-    
     }
 
-    static notificationsContentUpdate(notificationContentId: string, contentTitle: string, contentText: string){
+    static notificationsContentUpdate(notificationContentId: string, contentTitle: string, contentText: string) {
         const query = {
-            "id": `${notificationContentId}`,
-            "type": "giftReceived",
-            "title": `${contentTitle}`,
-            "text": `${contentText}`
-          }
+            id: `${notificationContentId}`,
+            type: 'giftReceived',
+            title: `${contentTitle}`,
+            text: `${contentText}`,
+        }
         return query
-    
     }
 }
