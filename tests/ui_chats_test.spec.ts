@@ -1,36 +1,35 @@
-import { request, test } from "@playwright/test";
-import { apiUrl } from "../utils/apiUrl";
-import { apiDataSet } from "../utils/dataSet";
+import { request, test } from '@playwright/test'
+import { apiUrl } from '../utils/apiUrl'
+import { apiDataSet } from '../utils/dataSet'
 import { App } from '../pages/App'
-import { Api } from "../pages/Api";
+import { Api } from '../pages/Api'
 
 let user, watcher
 
 test.describe('UI - Chat Tests', async () => {
-    test.beforeEach(async ({page}) => {
+    test.beforeEach(async ({ page }) => {
         const app = new App(page)
         user = await app.loginPage.apiLogin(apiUrl.qaEnvUrl)
         await app.chatPage.open()
     })
 
-    test('Chats - Default System Messge', async ({page}) => {
+    test('Chats - Default System Messge', async ({ page }) => {
         const app = new App(page)
         await app.chatPage.openExistingChat('Plamfy')
         await app.chatPage.observeSupportMessageTextContent()
     })
 
-    test('Chats - Unblock Chat', async ({page}) => {
+    test('Chats - Unblock Chat', async ({ page }) => {
         const app = new App(page)
         await app.chatPage.clickStartChatButton()
         await app.chatPage.clickStartChatButtonWithFirstSuggestedUser()
         await app.chatPage.observeBlockedChatForCoins()
         await app.chatPage.unblockChat()
     })
-
 })
 
-test.describe('UI - Chat Page With Two Users', async() => {
-    test.beforeEach(async ({page}) => {
+test.describe('UI - Chat Page With Two Users', async () => {
+    test.beforeEach(async ({ page }) => {
         const apiContext = await request.newContext()
         const app = new App(page)
         user = await app.loginPage.apiLogin(apiUrl.qaEnvUrl)
@@ -42,13 +41,13 @@ test.describe('UI - Chat Page With Two Users', async() => {
         await api.slackPage.addCoins(user.humanReadableId)
     })
 
-    test('Chats - Unblock Chat By Followings', async ({page, browser}) => {
+    test('Chats - Unblock Chat By Followings', async ({ page }) => {
         const app = new App(page)
         await app.chatPage.startChetWithSpecificUser(watcher.name)
         await app.chatPage.observeUnblockedChat()
     })
 
-    test('Chats - Message Validation', async ({page}) => {
+    test('Chats - Message Validation', async ({ page }) => {
         const app = new App(page)
         await app.chatPage.startChetWithSpecificUser(watcher.name)
         await app.chatPage.sendMessage(apiDataSet.validationMessageText)
@@ -56,15 +55,15 @@ test.describe('UI - Chat Page With Two Users', async() => {
         await app.chatPage.sendMessage255Symbols()
     })
 
-    test('Chats - Send Media File', async ({page}) => {
+    test('Chats - Send Media File', async ({ page }) => {
         const app = new App(page)
         await app.chatPage.startChetWithSpecificUser(watcher.name)
         await app.chatPage.sendMediaFile()
     })
 
-    test('Chats - Send Emoji', async ({page}) => {
+    test('Chats - Send Emoji', async ({ page }) => {
         const app = new App(page)
         await app.chatPage.startChetWithSpecificUser(watcher.name)
         await app.chatPage.sendEmoji()
     })
-}) 
+})

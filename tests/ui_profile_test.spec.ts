@@ -1,12 +1,12 @@
-import { test } from "@playwright/test";
-import { apiUrl } from "../utils/apiUrl";
-import { apiDataSet } from "../utils/dataSet";
+import { test } from '@playwright/test'
+import { apiUrl } from '../utils/apiUrl'
+import { apiDataSet } from '../utils/dataSet'
 import { App } from '../pages/App'
 
 let user
 
 test.describe('UI - Profile Tests', async () => {
-    test.beforeEach(async ({page}) => {
+    test.beforeEach(async ({ page }) => {
         const app = new App(page)
         user = await app.loginPage.apiLogin(apiUrl.qaEnvUrl)
         await app.profilePage.open()
@@ -18,36 +18,36 @@ test.describe('UI - Profile Tests', async () => {
     //     await api.deleteAccountPage.deleteAccount(apiUrl.qaEnvUrl, user.userToken)
     // })
 
-    test('Profile - My Info', async ({page}) => {
+    test('Profile - My Info', async ({ page }) => {
         const app = new App(page)
         await app.profilePage.observeStartStreamButton()
         await app.profilePage.observeBuyCoinsButton()
         await app.profilePage.observePersonalInfo(user.name)
     })
 
-    test('Profile - Buy Coins', async ({page}) => {
+    test('Profile - Buy Coins', async ({ page }) => {
         const app = new App(page)
         await app.profilePage.clickBuyCoinsBtn()
     })
 
-    test('Profile - Start Stream', async ({page}) => {
+    test('Profile - Start Stream', async ({ page }) => {
         const app = new App(page)
         await app.profilePage.clickStartStreamBtn()
     })
 
-    test('Profile - Edit Profile', async ({page}) => {
+    test('Profile - Edit Profile', async ({ page }) => {
         const app = new App(page)
         await app.profilePage.clickKebabMenuBtn()
         await app.profilePage.clickEditProfileBtn()
     })
 
-    test('Profile - Redeem Cash', async ({page}) => {
+    test('Profile - Redeem Cash', async ({ page }) => {
         const app = new App(page)
         await app.profilePage.clickKebabMenuBtn()
         await app.profilePage.clickRedeemCashBtn()
     })
 
-    test('Profile - Edit Profile e2e', async ({page}) => {
+    test('Profile - Edit Profile e2e', async ({ page }) => {
         const app = new App(page)
         const name = apiDataSet.randomName
         const bio = apiDataSet.randomBio

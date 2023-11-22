@@ -1,11 +1,11 @@
-import { Page, expect } from "@playwright/test"
-import { apiUrl } from "../../utils/apiUrl"
+import { Page, expect } from '@playwright/test'
+import { apiUrl } from '../../utils/apiUrl'
 
 export class AppStreamPage {
     page: Page
 
     constructor(page: Page) {
-        this.page = page 
+        this.page = page
     }
 
     async waitForStreamLoadingWatcher() {
@@ -41,7 +41,7 @@ export class AppStreamPage {
     }
 
     async closeWatchersList() {
-        await this.page.locator('.modal-close').click() 
+        await this.page.locator('.modal-close').click()
     }
 
     async clickFollowOnWatchersList() {
@@ -52,7 +52,4 @@ export class AppStreamPage {
         await expect(this.page.getByText('This stream ended')).toBeVisible()
         await this.page.locator('[aria-label="Close"]').click()
     }
-   
-
-
 }

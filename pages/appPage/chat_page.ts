@@ -1,6 +1,6 @@
-import { Locator, Page } from "@playwright/test"
-import { apiUrl } from "../../utils/apiUrl"
-import { apiDataSet } from "../../utils/dataSet"
+import { Locator, Page } from '@playwright/test'
+import { apiUrl } from '../../utils/apiUrl'
+import { apiDataSet } from '../../utils/dataSet'
 
 export class AppChatPage {
     page: Page
@@ -22,7 +22,7 @@ export class AppChatPage {
     emojiBtnLocator: Locator
 
     constructor(page: Page) {
-        this.page = page 
+        this.page = page
         this.chatTextAreaLocator = page.locator('[placeholder="Send a message…"]')
         this.mainStatChatBtnLocator = page.locator('button.header-chat__button')
         this.chatSearchFieldLocator = page.locator('[placeholder="Search"]')
@@ -54,11 +54,11 @@ export class AppChatPage {
         await this.clickStartChatButton()
         await this.chatSearchFieldLocator.fill(userName)
         await this.createChatBtnLocator.click()
-        await this.page.locator('span.header__user-name', {hasText: `${userName}`}).waitFor()
+        await this.page.locator('span.header__user-name', { hasText: `${userName}` }).waitFor()
     }
 
     async observeNewMessage(message: string) {
-        await this.page.locator('span.chat-message__text', {hasText: `${message}`}).waitFor()
+        await this.page.locator('span.chat-message__text', { hasText: `${message}` }).waitFor()
     }
 
     async sendMessage(message: string) {
@@ -91,19 +91,19 @@ export class AppChatPage {
     async blockUser() {
         this.openConextMenu()
         await this.blockUserBtnLocator.click()
-        await this.page.locator('div.confirm-modal__title', {hasText: 'Are you sure you want to block this user?'}).waitFor()
+        await this.page.locator('div.confirm-modal__title', { hasText: 'Are you sure you want to block this user?' }).waitFor()
         await this.confirmModalLocator.click()
         await this.page.waitForURL(`${apiUrl.qaUiUrl}/chat`)
     }
 
     async doNotSeeChatForSpecificUser(username: string) {
-        await this.page.locator('span.message-preview__context-name', {hasText: `${username}`}).waitFor({state: 'detached'})
+        await this.page.locator('span.message-preview__context-name', { hasText: `${username}` }).waitFor({ state: 'detached' })
     }
 
     async observeSupportMessageTextContent() {
         await this.contactSupportBtnLocator.waitFor()
         await this.messageTimeIconLocator.waitFor()
-        await this.page.locator('span.header__user-name', {hasText: "Plamfy Support"}).waitFor()
+        await this.page.locator('span.header__user-name', { hasText: 'Plamfy Support' }).waitFor()
         await this.translateIconLocator.waitFor()
     }
 
@@ -112,7 +112,7 @@ export class AppChatPage {
     }
 
     async observeBlockedChatForCoins() {
-        await this.page.locator('span.chat-input-area__textarea--lock-text', {hasText: '45 coin/message'}).waitFor()
+        await this.page.locator('span.chat-input-area__textarea--lock-text', { hasText: '45 coin/message' }).waitFor()
     }
 
     async unblockChat() {
@@ -126,11 +126,11 @@ export class AppChatPage {
     async sendMediaFile() {
         this.page.on('filechooser', async (filechooser) => {
             await filechooser.setFiles('./utils/unnamed.jpg')
-          })
-          await this.atachmentBtnLocator.click()
-          await this.page.waitForTimeout(1000)
-          await this.page.waitForLoadState('networkidle')
-          await this.mediaMessageLocator.waitFor()
+        })
+        await this.atachmentBtnLocator.click()
+        await this.page.waitForTimeout(1000)
+        await this.page.waitForLoadState('networkidle')
+        await this.mediaMessageLocator.waitFor()
     }
 
     async sendEmoji() {
@@ -139,6 +139,4 @@ export class AppChatPage {
         await this.page.keyboard.press('Enter')
         await this.observeNewMessage('👍')
     }
-
-
 }

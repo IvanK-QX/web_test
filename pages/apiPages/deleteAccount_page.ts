@@ -1,4 +1,4 @@
-import { APIRequestContext, expect, request } from "@playwright/test"
+import { APIRequestContext, expect, request } from '@playwright/test'
 
 export class ApiDeleteAccountPage {
     apiContext: APIRequestContext
@@ -8,22 +8,21 @@ export class ApiDeleteAccountPage {
     }
 
     async deleteAccount(url: string, userToken: string) {
-        const apiContext = await request.newContext({ignoreHTTPSErrors: true})
+        const apiContext = await request.newContext({ ignoreHTTPSErrors: true })
         const data = {
-            reason: "iDon'tLikeThisApp"
+            reason: "iDon'tLikeThisApp",
         }
         const headers = {
-            'authorization': `Bearer ${userToken}`,
-            'packagename': 'com.plamfy',
+            authorization: `Bearer ${userToken}`,
+            packagename: 'com.plamfy',
             'content-type': 'application/json',
-            'appversion': '1',
-            'os': 'browser'
+            appversion: '1',
+            os: 'browser',
         }
-        const apiRequest = await apiContext.post(`${url}:3000/delete`, {data, headers: headers})
+        const apiRequest = await apiContext.post(`${url}:3000/delete`, { data, headers: headers })
         const response = await apiRequest.json()
         expect(apiRequest.ok()).toBeTruthy()
         expect(response.success).toEqual(true)
         console.log(`User Deleted`)
     }
-
 }

@@ -1,5 +1,5 @@
-import { Locator, Page } from "@playwright/test"
-import { apiUrl } from "../../utils/apiUrl"
+import { Locator, Page } from '@playwright/test'
+import { apiUrl } from '../../utils/apiUrl'
 
 export class AppMainPage {
     page: Page
@@ -7,7 +7,7 @@ export class AppMainPage {
     searchContent: Locator
 
     constructor(page: Page) {
-        this.page = page 
+        this.page = page
         this.searchField = page.locator('[placeholder="Search Everything"]')
         this.searchContent = page.locator('div.search__content--loaded')
     }
@@ -24,8 +24,8 @@ export class AppMainPage {
 
     async joinStream(streamerName: string) {
         await this.page.waitForTimeout(1500)
-        await this.page.reload({waitUntil: 'domcontentloaded'})
-        await this.page.reload({waitUntil: 'domcontentloaded'})
+        await this.page.reload({ waitUntil: 'domcontentloaded' })
+        await this.page.reload({ waitUntil: 'domcontentloaded' })
         this.clickOnStream(streamerName)
     }
 
@@ -36,7 +36,6 @@ export class AppMainPage {
     }
 
     async validateCorrectSearch(userName = '50cent') {
-        await this.page.locator('div.user-info-card__content--name', {hasText: `${userName}`}).waitFor()
+        await this.page.locator('div.user-info-card__content--name', { hasText: `${userName}` }).waitFor()
     }
-
 }

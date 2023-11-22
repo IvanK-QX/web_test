@@ -1,6 +1,6 @@
-import { APIRequestContext, expect, request } from "@playwright/test"
-import { Headers } from "../../utils/headers"
-import { faker } from "@faker-js/faker"
+import { APIRequestContext, expect, request } from '@playwright/test'
+import { Headers } from '../../utils/headers'
+import { faker } from '@faker-js/faker'
 export class ApiOtherPage {
     apiContext: APIRequestContext
 
@@ -8,12 +8,11 @@ export class ApiOtherPage {
         this.apiContext = apiContext
     }
 
-
     async getFeatureFlag(url: string, adminToken: string) {
-        const apiContext = await request.newContext({ignoreHTTPSErrors: true})
+        const apiContext = await request.newContext({ ignoreHTTPSErrors: true })
         const headers = Headers.userHeader(adminToken)
 
-        const apiRequest = await apiContext.get(`${url}:3000/featureFlag`, {headers: headers})
+        const apiRequest = await apiContext.get(`${url}:3000/featureFlag`, { headers: headers })
         expect(apiRequest.ok()).toBeTruthy()
         const response = await apiRequest.text()
         expect(response).toContain('offSpecialOfferAfter24h')
@@ -21,34 +20,34 @@ export class ApiOtherPage {
     }
 
     async snapAuth(url: string, userToken: string) {
-        const apiContext = await request.newContext({ignoreHTTPSErrors: true})
+        const apiContext = await request.newContext({ ignoreHTTPSErrors: true })
         const data = {
-            "additionalProp1": {}
+            additionalProp1: {},
         }
         const headers = Headers.userHeader(userToken)
 
-        const apiRequest = await apiContext.post(`${url}:3000/snap/auth`, {data, headers: headers})
+        const apiRequest = await apiContext.post(`${url}:3000/snap/auth`, { data, headers: headers })
         expect(apiRequest.ok()).toBeTruthy()
         console.log(`Snap Auth passed`)
     }
 
     async snapInit(url: string, userToken: string) {
-        const apiContext = await request.newContext({ignoreHTTPSErrors: true})
+        const apiContext = await request.newContext({ ignoreHTTPSErrors: true })
         const data = {
-            "code": "any"
+            code: 'any',
         }
         const headers = Headers.userHeader(userToken)
 
-        const apiRequest = await apiContext.post(`${url}:3000/snap/init`, {data, headers: headers})
+        const apiRequest = await apiContext.post(`${url}:3000/snap/init`, { data, headers: headers })
         expect(apiRequest.ok()).toBeTruthy()
         console.log(`Snap Init passed`)
     }
 
     async getShopList(url: string, userToken: string) {
-        const apiContext = await request.newContext({ignoreHTTPSErrors: true})
+        const apiContext = await request.newContext({ ignoreHTTPSErrors: true })
         const headers = Headers.userHeader(userToken)
 
-        const apiRequest = await apiContext.get(`${url}:3000/shop`, {headers: headers})
+        const apiRequest = await apiContext.get(`${url}:3000/shop`, { headers: headers })
         expect(apiRequest.ok()).toBeTruthy()
         const response = await apiRequest.json()
         const title = response.title
@@ -57,10 +56,10 @@ export class ApiOtherPage {
     }
 
     async getRatios(url: string, userToken: string) {
-        const apiContext = await request.newContext({ignoreHTTPSErrors: true})
+        const apiContext = await request.newContext({ ignoreHTTPSErrors: true })
         const headers = Headers.userHeader(userToken)
 
-        const apiRequest = await apiContext.get(`${url}:3000/ratios`, {headers: headers})
+        const apiRequest = await apiContext.get(`${url}:3000/ratios`, { headers: headers })
         expect(apiRequest.ok()).toBeTruthy()
         const response = await apiRequest.json()
         const coinsPerDiamond = response.coinsPerDiamond
@@ -69,10 +68,10 @@ export class ApiOtherPage {
     }
 
     async getCoinsBoughtLast30Days(url: string, userToken: string) {
-        const apiContext = await request.newContext({ignoreHTTPSErrors: true})
+        const apiContext = await request.newContext({ ignoreHTTPSErrors: true })
         const headers = Headers.userHeader(userToken)
 
-        const apiRequest = await apiContext.get(`${url}:3000/purchases/coinsBoughtLast30Days`, {headers: headers})
+        const apiRequest = await apiContext.get(`${url}:3000/purchases/coinsBoughtLast30Days`, { headers: headers })
         expect(apiRequest.ok()).toBeTruthy()
         const response = await apiRequest.json()
         const coins = response.coins
@@ -81,23 +80,23 @@ export class ApiOtherPage {
     }
 
     async lastLaunch(url: string, userToken: string) {
-        const apiContext = await request.newContext({ignoreHTTPSErrors: true})
+        const apiContext = await request.newContext({ ignoreHTTPSErrors: true })
         const data = {
-            "deviceId": `${faker.string.uuid()}`,
-            "language": "UK"
-          }
+            deviceId: `${faker.string.uuid()}`,
+            language: 'UK',
+        }
         const headers = Headers.userHeader(userToken)
 
-        const apiRequest = await apiContext.post(`${url}:3000/lastLaunch`, {data, headers: headers})
+        const apiRequest = await apiContext.post(`${url}:3000/lastLaunch`, { data, headers: headers })
         expect(apiRequest.ok()).toBeTruthy()
         console.log(`Last launch info is received`)
     }
 
     async getModelProblem(url: string, userToken: string) {
-        const apiContext = await request.newContext({ignoreHTTPSErrors: true})
+        const apiContext = await request.newContext({ ignoreHTTPSErrors: true })
         const headers = Headers.userHeader(userToken)
 
-        const apiRequest = await apiContext.get(`${url}:3000/modelProblem`, {headers: headers})
+        const apiRequest = await apiContext.get(`${url}:3000/modelProblem`, { headers: headers })
         expect(apiRequest.ok()).toBeTruthy()
         const response = await apiRequest.text()
         expect(response).toContain('ps')
@@ -106,14 +105,14 @@ export class ApiOtherPage {
     }
 
     async mounthlyBonus(url: string, userToken: string) {
-        const apiContext = await request.newContext({ignoreHTTPSErrors: true})
+        const apiContext = await request.newContext({ ignoreHTTPSErrors: true })
         const data = {
-            "year": 3000,
-            "month": 12
-          }
+            year: 3000,
+            month: 12,
+        }
         const headers = Headers.userHeader(userToken)
 
-        const apiRequest = await apiContext.post(`${url}:3000/bonuses/monthlyBonus`, {data, headers: headers})
+        const apiRequest = await apiContext.post(`${url}:3000/bonuses/monthlyBonus`, { data, headers: headers })
         expect(apiRequest.ok()).toBeTruthy()
         const response = await apiRequest.json()
         const hoursStreamed = response.hoursStreamed
@@ -126,18 +125,17 @@ export class ApiOtherPage {
     }
 
     async agentBonus(url: string, userToken: string) {
-        const apiContext = await request.newContext({ignoreHTTPSErrors: true})
+        const apiContext = await request.newContext({ ignoreHTTPSErrors: true })
         const data = {
-            "year": 3000,
-            "month": 12
-          }
+            year: 3000,
+            month: 12,
+        }
         const headers = Headers.userHeader(userToken)
 
-        const apiRequest = await apiContext.post(`${url}:3000/bonuses/agentMonthlyBonus`, {data, headers: headers})
+        const apiRequest = await apiContext.post(`${url}:3000/bonuses/agentMonthlyBonus`, { data, headers: headers })
         expect(apiRequest.ok()).toBeTruthy()
         const response = await apiRequest.text()
-        expect(response).toContain("0")
+        expect(response).toContain('0')
         console.log(`Agent Mounthly bonuses is displayed`)
     }
-
 }

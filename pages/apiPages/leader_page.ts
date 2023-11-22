@@ -1,5 +1,5 @@
-import { APIRequestContext, expect, request } from "@playwright/test"
-import { Headers } from "../../utils/headers"
+import { APIRequestContext, expect, request } from '@playwright/test'
+import { Headers } from '../../utils/headers'
 export class ApiLeadersPage {
     apiContext: APIRequestContext
 
@@ -7,19 +7,17 @@ export class ApiLeadersPage {
         this.apiContext = apiContext
     }
 
-    async getLeders(url: string, userToken: string, period: "week" | "day" | "month") {
-        const apiContext = await request.newContext({ignoreHTTPSErrors: true})
+    async getLeders(url: string, userToken: string, period: 'week' | 'day' | 'month') {
+        const apiContext = await request.newContext({ ignoreHTTPSErrors: true })
         const data = {
             period: `${period}`,
             itemsPerPage: 100,
-            skip: 0
+            skip: 0,
         }
         const headers = Headers.userHeader(userToken)
 
-        const apiRequest = await apiContext.post(`${url}:3000/streams/leaderboard`, {data, headers: headers})
-        const response = await apiRequest.json()
+        const apiRequest = await apiContext.post(`${url}:3000/streams/leaderboard`, { data, headers: headers })
         expect(apiRequest.ok()).toBeTruthy()
         console.log(`Leaders for period: ${period} is dispalyed`)
     }
-
 }

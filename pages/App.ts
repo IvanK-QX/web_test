@@ -1,13 +1,13 @@
-import { Page } from "@playwright/test"
-import { AppLoginPage } from "./appPage/login_page"
-import { AppSidePanelPage } from "./appPage/sidePanel_page"
-import { AppPreStreamPage } from "./appPage/preStream_page"
-import { AppMainPage } from "./appPage/main_page"
-import { AppStreamPage } from "./appPage/stream_page"
-import { AppEditProfilePage } from "./appPage/editProfile_page"
-import { AppChatPage } from "./appPage/chat_page"
-import { AppBlockedPage } from "./appPage/blocked_page"
-import { AppProfilePage } from "./appPage/profile_page"
+import { Page } from '@playwright/test'
+import { AppLoginPage } from './appPage/login_page'
+import { AppSidePanelPage } from './appPage/sidePanel_page'
+import { AppPreStreamPage } from './appPage/preStream_page'
+import { AppMainPage } from './appPage/main_page'
+import { AppStreamPage } from './appPage/stream_page'
+import { AppEditProfilePage } from './appPage/editProfile_page'
+import { AppChatPage } from './appPage/chat_page'
+import { AppBlockedPage } from './appPage/blocked_page'
+import { AppProfilePage } from './appPage/profile_page'
 export class App {
     page: Page
     loginPage: AppLoginPage
