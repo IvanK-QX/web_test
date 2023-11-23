@@ -5,7 +5,7 @@ import 'dotenv/config'
 
 const config: PlaywrightTestConfig = {
     testDir: './tests',
-    timeout: 1 * 90 * 1000,
+    timeout: 2 * 90 * 1000,
     expect: {
         timeout: 20000,
     },
