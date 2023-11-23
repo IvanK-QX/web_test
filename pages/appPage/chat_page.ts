@@ -20,6 +20,9 @@ export class AppChatPage {
     atachmentBtnLocator: Locator
     mediaMessageLocator: Locator
     emojiBtnLocator: Locator
+    giftMessageText: Locator
+    flameGift: Locator
+    giftMessagImageFlame: Locator
 
     constructor(page: Page) {
         this.page = page
@@ -39,6 +42,9 @@ export class AppChatPage {
         this.atachmentBtnLocator = page.locator('.chat-input-area__attach-btn')
         this.mediaMessageLocator = page.locator('div.chat-private-message-file__content')
         this.emojiBtnLocator = page.locator('button.chat-input-area__button-emoji-picker')
+        this.giftMessageText = page.locator('span.chat-private-send-gift__text')
+        this.flameGift = page.locator('.gift-card__content--button [alt="flame_v1.png Gift Image"]')
+        this.giftMessagImageFlame = page.locator('.gift-card__content--private-chat  [alt="flame_v1.png Gift Image"]')
     }
 
     async open() {
@@ -81,7 +87,7 @@ export class AppChatPage {
     async sendObusiveWord(word: string) {
         await this.chatTextAreaLocator.fill(word)
         await this.page.keyboard.press('Enter')
-        this.observeNewMessage('*****')
+        await this.observeNewMessage('*****')
     }
 
     async openConextMenu() {
@@ -138,5 +144,11 @@ export class AppChatPage {
         await this.page.locator('[aria-label="👍, +1, thumbsup"]').nth(0).click()
         await this.page.keyboard.press('Enter')
         await this.observeNewMessage('👍')
+    }
+
+    async sendGift() {
+        await this.flameGift.click()
+        await this.giftMessageText.waitFor()
+        await this.giftMessagImageFlame.waitFor()
     }
 }

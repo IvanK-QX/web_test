@@ -52,4 +52,16 @@ export class AppStreamPage {
         await expect(this.page.getByText('This stream ended')).toBeVisible()
         await this.page.locator('[aria-label="Close"]').click()
     }
+
+    async sentGift(myName: string, gift: 'flame_v1' | 'chocolate_candies' ) {
+        await this.page.waitForTimeout(500)
+        await this.page.locator(`//*[@alt="${gift}.png Gift Image"]/../..`).nth(1).click()
+        await this.page.locator('.chat-system-send-gift__user-name', {hasText: `${myName}`}).waitFor()
+        await this.page.locator(`.chat-system-send-gift__gift-wrapper [src="https://media.streamsqa.com/${gift}.png"]`).waitFor()
+    }
+
+    async observeRecivedGift(senderName: string, gift: 'flame_v1' | 'chocolate_candies' ) {
+        await this.page.locator('.chat-system-send-gift__user-name', {hasText: `${senderName}`}).waitFor()
+        await this.page.locator(`img[alt="Gift ${gift}.png picture"]`).waitFor()
+    }
 }
