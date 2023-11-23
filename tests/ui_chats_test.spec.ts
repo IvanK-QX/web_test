@@ -66,4 +66,10 @@ test.describe('UI - Chat Page With Two Users', async () => {
         await app.chatPage.startChetWithSpecificUser(watcher.name)
         await app.chatPage.sendEmoji()
     })
+
+    test('Chats - Send Gift In Chat', async ({ page }) => {
+        const app = new App(page)
+        await app.chatPage.startChetWithSpecificUser(watcher.name)
+        await app.chatPage.sendGift()
+    })
 })

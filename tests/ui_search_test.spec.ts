@@ -20,4 +20,12 @@ test.describe('UI - Search Tests', async () => {
         await app.mainPage.searchUserByName('7879')
         await app.mainPage.validateCorrectSearch('50cent')
     })
+
+    test('Chats - Send Gift From Profile ', async ({ page }) => {
+        const app = new App(page)
+        await app.mainPage.searchUserByName('7879')
+        await app.mainPage.validateCorrectSearch('50cent')
+        await app.mainPage.clickonUserProfile()
+        await app.mainPage.sendGiftFromProfile()
+    })
 })
