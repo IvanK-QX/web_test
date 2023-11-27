@@ -64,7 +64,7 @@ export class AppChatPage {
     }
 
     async observeNewMessage(message: string) {
-        await this.page.locator('span.chat-message__text', { hasText: `${message}` }).waitFor()
+        await this.page.locator('pre.chat-message__text', { hasText: `${message}` }).waitFor()
     }
 
     async sendMessage(message: string) {
