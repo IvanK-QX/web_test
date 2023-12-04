@@ -45,7 +45,7 @@ jobs:
               with:
                   name: allure-results
                   path: allure-results
-                  retention-days: 20
+                  retention-days: 5
 
             - name: Get Allure history
               uses: actions/checkout@v3
@@ -64,7 +64,7 @@ jobs:
                   gh_pages: gh-pages
                   allure_report: allure-report
                   allure_history: allure-history
-                  keep_reports: 20
+                  keep_reports: 5
 
             - name: Deploy report to Github Pages
               if: always()
