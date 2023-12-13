@@ -151,4 +151,10 @@ export class AppChatPage {
         await this.giftMessageText.waitFor()
         await this.giftMessagImageFlame.waitFor()
     }
+
+    async sendMessageFromBlocklist(message: string) {
+        await this.chatTextAreaLocator.fill(message)
+        await this.page.keyboard.press('Enter')
+        await this.page.locator('.chat-message__retry-text').waitFor()
+    }
 }

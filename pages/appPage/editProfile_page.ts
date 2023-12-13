@@ -41,4 +41,10 @@ export class AppEditProfilePage {
         await this.saveBtn.click()
         await this.successPoup.waitFor({ state: 'attached' })
     }
+
+    async setInappropriateName(name: string) {
+        this.chageName(name)
+        await this.saveBtn.click()
+        await this.page.locator('.ui-input__error-text', {hasText: 'Your username includes inappropriate expression.'}).waitFor()
+    }
 }
