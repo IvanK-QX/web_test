@@ -27,6 +27,26 @@ test.describe('UI - Profile Tests', async () => {
         await app.chatPage.open()
         await app.chatPage.startChetWithSpecificUser(watcher.name)
         await app.chatPage.sendMessageFromBlocklist('tango')
+    })
 
+    test('Stoplist - Stream Titile', async ({page}) => {
+        const app = new App(page)
+        await app.sidePanelPage.clickCreateStreamBtn()
+        await app.preStreamPage.clickStartStreamBtn()
+        await app.preStreamPage.uploadAvatar()
+        await app.preStreamPage.changeStreamTitle('blow job')
+        await page.keyboard.press('Enter')
+        await app.preStreamPage.observeInapproperiateError()
+    })
+
+    test('Stoplist - Stream Chat', async ({page}) => {
+        const app = new App(page)
+        await app.sidePanelPage.clickCreateStreamBtn()
+        await app.preStreamPage.clickStartStreamBtn()
+        await app.preStreamPage.uploadAvatar()
+        await app.preStreamPage.clickStartStreamBtn()
+        await app.preStreamPage.observeStream()
+        await app.streamPage.sendMessageInStreamChat('bitch')
+        await app.streamPage.observeModeratorMessage()
     })
 })

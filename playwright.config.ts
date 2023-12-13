@@ -12,11 +12,11 @@ const config: PlaywrightTestConfig = {
     fullyParallel: false,
     reportSlowTests: { max: 0, threshold: 60001 },
     forbidOnly: !!process.env.CI,
-    retries: 0,
+    retries: 2,
     workers: process.env.CI ? 6 : undefined,
     reporter: [['line'], ['allure-playwright']],
     use: {
-        headless: false,
+        headless: true,
         viewport: { width: 1280, height: 720 },
         ignoreHTTPSErrors: true,
         video: 'retain-on-failure',

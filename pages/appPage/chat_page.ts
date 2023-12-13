@@ -1,6 +1,6 @@
 import { Locator, Page } from '@playwright/test'
 import { apiUrl } from '../../utils/apiUrl'
-import { apiDataSet } from '../../utils/dataSet'
+import { apiDataSet, texts } from '../../utils/dataSet'
 
 export class AppChatPage {
     page: Page
@@ -97,7 +97,7 @@ export class AppChatPage {
     async blockUser() {
         this.openConextMenu()
         await this.blockUserBtnLocator.click()
-        await this.page.locator('div.confirm-modal__title', { hasText: 'Are you sure you want to block this user?' }).waitFor()
+        await this.page.locator('div.confirm-modal__title', { hasText: texts.blockUserConfirmationText }).waitFor()
         await this.confirmModalLocator.click()
         await this.page.waitForURL(`${apiUrl.qaUiUrl}/chat`)
     }
@@ -109,7 +109,7 @@ export class AppChatPage {
     async observeSupportMessageTextContent() {
         await this.contactSupportBtnLocator.waitFor()
         await this.messageTimeIconLocator.waitFor()
-        await this.page.locator('span.header__user-name', { hasText: 'Plamfy Support' }).waitFor()
+        await this.page.locator('span.header__user-name', { hasText: texts.plamfySupportText }).waitFor()
         await this.translateIconLocator.waitFor()
     }
 
@@ -118,7 +118,7 @@ export class AppChatPage {
     }
 
     async observeBlockedChatForCoins() {
-        await this.page.locator('span.chat-input-area__textarea--lock-text', { hasText: '45 coin/message' }).waitFor()
+        await this.page.locator('span.chat-input-area__textarea--lock-text', { hasText: texts.unblockChatText }).waitFor()
     }
 
     async unblockChat() {
