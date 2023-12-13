@@ -22,3 +22,11 @@ export const apiDataSet = {
         'During these formative years of the Web, web pages could only be static, lacking the capability for dynamic behavior after the page was loaded in the browser. There was a desire in the flourishing web development scene to remove this limitation, so in 19',
     uiStreamMessage: 'hello this is playwright message for chat in real-time',
 }
+
+export const texts = {
+    streamTitleInappropriateError: 'Your title includes inappropriate expression. Please, add another title.',
+    unblockChatText: '45 coin/message',
+    plamfySupportText: 'Plamfy Support',
+    blockUserConfirmationText: 'Are you sure you want to block this user?',
+    profileInappropriateValidationText: 'Your username includes inappropriate expression.'
+}

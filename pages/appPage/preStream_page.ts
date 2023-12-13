@@ -1,4 +1,5 @@
 import { Locator, Page } from '@playwright/test'
+import { texts } from '../../utils/dataSet'
 
 export class AppPreStreamPage {
     page: Page
@@ -29,8 +30,8 @@ export class AppPreStreamPage {
         this.snackBarCloseBtn = page.locator('button.stream-snackbar__close')
     }
 
-    async changeStreamTitle() {
-        await this.streamTitleField.fill('lets go')
+    async changeStreamTitle(name = 'lets go') {
+        await this.streamTitleField.fill(name)
     }
 
     async clickStartStreamBtn() {
@@ -90,5 +91,9 @@ export class AppPreStreamPage {
     async closeStreamSnackbar() {
         await this.snackBarCloseBtn.click()
         await this.page.locator('span.stream-snackbar__text', {hasText: 'Broadcasters under 18 are not permitted'}).waitFor({state: 'detached'})
+    }
+
+    async observeInapproperiateError() {
+        await this.page.locator('.ui-input__error-text', {hasText: texts.streamTitleInappropriateError}).waitFor()
     }
 }

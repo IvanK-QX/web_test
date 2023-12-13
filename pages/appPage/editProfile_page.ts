@@ -1,5 +1,6 @@
 import { Locator, Page } from '@playwright/test'
 import { apiUrl } from '../../utils/apiUrl'
+import { texts } from '../../utils/dataSet'
 
 export class AppEditProfilePage {
     page: Page
@@ -40,5 +41,11 @@ export class AppEditProfilePage {
     async clickSaveBtn() {
         await this.saveBtn.click()
         await this.successPoup.waitFor({ state: 'attached' })
+    }
+
+    async setInappropriateName(name: string) {
+        this.chageName(name)
+        await this.saveBtn.click()
+        await this.page.locator('.ui-input__error-text', {hasText: texts.profileInappropriateValidationText}).waitFor()
     }
 }
