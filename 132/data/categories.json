@@ -1,0 +1,43 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "locator.waitFor: Timeout 20000ms exceeded.\n=========================== logs ===========================\nwaiting for locator('pre.chat-message__text').filter({ hasText: 'During these formative years of the Web, web pages could only be static, lacking the capability for dynamic behavior after the page was loaded in the browser. There was a desire in the flourishing web development scene to remove this limitation, so in 19' }) to be visible\n============================================================",
+      "children" : [ {
+        "name" : "Chats - Message Validation",
+        "uid" : "898a8df916a2ef9e",
+        "parentUid" : "0cd41f8a4cdbf4564bd6c43f35d6d933",
+        "status" : "failed",
+        "time" : {
+          "start" : 1702632875211,
+          "stop" : 1702632914119,
+          "duration" : 38908
+        },
+        "flaky" : true,
+        "newFailed" : true,
+        "parameters" : [ "chromium" ]
+      } ],
+      "uid" : "0cd41f8a4cdbf4564bd6c43f35d6d933"
+    }, {
+      "name" : "locator.waitFor: Error: strict mode violation: locator('pre.chat-message__text').filter({ hasText: '\uD83D\uDC4D' }) resolved to 2 elements:\n    1) <pre data-v-d9dbf16a=\"\" data-v-7589d880=\"\" class=\"cha…>…</pre> aka locator('div').filter({ hasText: /^\uD83D\uDC4D$/ }).locator('pre')\n    2) <pre data-v-d9dbf16a=\"\" data-v-7589d880=\"\" class=\"cha…>…</pre> aka getByText('\uD83D\uDC4D').nth(1)\n\n=========================== logs ===========================\nwaiting for locator('pre.chat-message__text').filter({ hasText: '\uD83D\uDC4D' }) to be visible\n============================================================",
+      "children" : [ {
+        "name" : "Chats - Send Emoji",
+        "uid" : "dd7622ffcb86d74",
+        "parentUid" : "ef7099bbc257285932624de038523204",
+        "status" : "failed",
+        "time" : {
+          "start" : 1702632934246,
+          "stop" : 1702632956102,
+          "duration" : 21856
+        },
+        "flaky" : false,
+        "newFailed" : true,
+        "parameters" : [ "chromium" ]
+      } ],
+      "uid" : "ef7099bbc257285932624de038523204"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ],
+  "name" : "categories"
+}
