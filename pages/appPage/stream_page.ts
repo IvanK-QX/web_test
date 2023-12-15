@@ -9,7 +9,7 @@ export class AppStreamPage {
     }
 
     async waitForStreamLoadingWatcher() {
-        await this.page.locator('div.single-stream__actions').waitFor()
+        await this.page.locator('div.stream-player__frame').waitFor()
         await this.page.locator('div.gift-shop-box__header').waitFor()
         await this.page.locator('div.chat-system-message').waitFor()
     }

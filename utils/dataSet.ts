@@ -28,5 +28,7 @@ export const texts = {
     unblockChatText: '45 coin/message',
     plamfySupportText: 'Plamfy Support',
     blockUserConfirmationText: 'Are you sure you want to block this user?',
-    profileInappropriateValidationText: 'Your username includes inappropriate expression.'
+    profileInappropriateValidationText: 'Your username includes inappropriate expression.',
+    save: 'Save',
+    editProfileTitle: 'Edit Profile'
 }
