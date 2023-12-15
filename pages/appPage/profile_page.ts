@@ -1,5 +1,6 @@
 import { Locator, Page } from '@playwright/test'
 import { apiUrl } from '../../utils/apiUrl'
+import { texts } from '../../utils/dataSet'
 
 export class AppProfilePage {
     page: Page
@@ -24,7 +25,7 @@ export class AppProfilePage {
         this.stremTitleInputField = page.locator('[placeholder="Stream title"]')
         this.kebabMenuBtn = page.locator('div.context-menu')
         this.kebabMenuBody = page.locator('div.context-menu__body')
-        this.editProfileTitle = page.locator('h2.profile-edit__title')
+        this.editProfileTitle = page.locator('h1.header-title--desktop', {hasText: texts.editProfileTitle})
         this.editProfileBtn = page.locator('//*[contains(text(),"Edit Profile")]')
         this.redeemCashBtn = page.locator('//*[contains(text(),"Redeem Cash")]')
         this.redemCashTitle = page.locator('span.redeem-card__title-text')
