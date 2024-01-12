@@ -55,7 +55,7 @@ export class AppStreamPage {
 
     async sentGift(myName: string, gift: 'flame_v1' | 'chocolate_candies' ) {
         await this.page.waitForTimeout(500)
-        await this.page.locator(`//*[@alt="${gift}.png Gift Image"]/../..`).nth(1).click()
+        await this.page.locator(`[src="https://media.streamsqa.com/${gift}.png"]`).click()
         await this.page.locator('.chat-system-send-gift__user-name', {hasText: `${myName}`}).waitFor()
         await this.page.locator(`.chat-system-send-gift__gift-wrapper [src="https://media.streamsqa.com/${gift}.png"]`).waitFor()
     }
