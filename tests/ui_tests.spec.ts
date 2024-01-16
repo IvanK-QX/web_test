@@ -19,7 +19,7 @@ test.describe('UI Tests', async () => {
         await api.followingPage.follow(apiUrl.qaEnvUrl, watcher.userToken, streamer.id)
     })
 
-    test.only('Star sand Join Stream', async ({ page }) => {
+    test('Star sand Join Stream', async ({ page }) => {
         const app = new App(page)
         const watcherPage = new App(newPage)
         await app.ediProfilePage.open()
