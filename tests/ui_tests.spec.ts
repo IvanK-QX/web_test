@@ -19,7 +19,7 @@ test.describe('UI Tests', async () => {
         await api.followingPage.follow(apiUrl.qaEnvUrl, watcher.userToken, streamer.id)
     })
 
-    test('Star sand Join Stream', async ({ page }) => {
+    test.only('Star sand Join Stream', async ({ page }) => {
         const app = new App(page)
         const watcherPage = new App(newPage)
         await app.ediProfilePage.open()
@@ -39,9 +39,9 @@ test.describe('UI Tests', async () => {
         await watcherPage.streamPage.sendMessageInStreamChat('bitch')
         await watcherPage.streamPage.observeModeratorMessage()
         //bug > no watcher list 
-        // await app.streamPage.openWatchersList()
-        // await app.streamPage.clickFollowOnWatchersList()
-        // await app.streamPage.closeWatchersList()
+        await app.streamPage.openWatchersList()
+        await app.streamPage.clickFollowOnWatchersList()
+        await app.streamPage.closeWatchersList()
         await app.streamPage.closeStreamAsStreamer()
         await watcherPage.streamPage.closeEndStreamModalAsWatcher()
         await app.chatPage.open()
