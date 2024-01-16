@@ -39,9 +39,9 @@ test.describe('UI Tests', async () => {
         await watcherPage.streamPage.sendMessageInStreamChat('bitch')
         await watcherPage.streamPage.observeModeratorMessage()
         //bug > no watcher list 
-        // await app.streamPage.openWatchersList()
-        // await app.streamPage.clickFollowOnWatchersList()
-        // await app.streamPage.closeWatchersList()
+        await app.streamPage.openWatchersList()
+        await app.streamPage.clickFollowOnWatchersList()
+        await app.streamPage.closeWatchersList()
         await app.streamPage.closeStreamAsStreamer()
         await watcherPage.streamPage.closeEndStreamModalAsWatcher()
         await app.chatPage.open()

@@ -68,6 +68,7 @@ export class AppChatPage {
     }
 
     async sendMessage(message: string) {
+        await this.page.waitForTimeout(500)
         await this.chatTextAreaLocator.fill(message)
         await this.page.keyboard.press('Enter')
         await this.observeNewMessage(message)
