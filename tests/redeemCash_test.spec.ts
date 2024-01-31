@@ -43,7 +43,7 @@ test.describe('UI - Redeem Cash Flow', async () => {
         await app.redeemCashPage.redeemCashTitleCheck()
         await app.redeemCashPage.clickAddPaymentMethodBtn()
         await app.redeemCashPage.clickAddBinanceBtn()
-        await app.redeemCashPage.enterPayoneerEmail(binanceWallet)
+        await app.redeemCashPage.enterBinanceWallet(binanceWallet)
         await app.redeemCashPage.clickAddPaymentSaveBtn()
         await app.redeemCashPage.clickAddPaymentOkBtn()  
         await app.redeemCashPage.redeemCashPaymentAddedCheck({userToken: user.userToken, binance: binanceWallet}); 

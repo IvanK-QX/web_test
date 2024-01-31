@@ -51,8 +51,8 @@ export class AppRedeemCashPage {
         await this.page.fill(locators.redeemCashPage.payoneerEmailInput, payoneer)
     }
 
-    async enterBitcoinWallet(bitcoinWallet: string) {
-        await this.page.fill(locators.redeemCashPage.bitcoinWalletInput, bitcoinWallet)
+    async enterBinanceWallet(binanceWallet: string) {
+        await this.page.fill(locators.redeemCashPage.binanceWalletInput, binanceWallet)
     }
     
     async clickAddPaymentSaveBtn() {
