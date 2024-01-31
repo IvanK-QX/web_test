@@ -38,11 +38,11 @@ export class AppReferralPage {
     }
 
     async copyAgentCode() {
-        return await this.page.locator(locators.referralPage.referralCode).inputValue()
+        return await this.page.locator('div').filter({ hasText: /^Referral CodeCopy code$/ }).getByLabel('Referral Code').inputValue()
     }
 
     async enterMyAgentCode(text:string) {
-        await this.page.fill(locators.referralPage.myAgentCodeInput, text)
+        await this.page.locator('div').filter({ hasText: /^Referral CodeAdd Manager$/ }).getByLabel('Referral Code').fill(text)
     }
 
     async checkMyAgentId(agentId:string | number) {

@@ -31,6 +31,7 @@ test.describe('UI Referral Program Flow', async () => {
       
         await agentApp.referralPage.clickProfileBtn()
         await agentApp.referralPage.clickReferralProgramBtn()
+        await page.pause()
         const agentCode = await agentApp.referralPage.copyAgentCode()
        
         //User Flow 

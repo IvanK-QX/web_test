@@ -16,7 +16,7 @@ const config: PlaywrightTestConfig = {
     workers: process.env.CI ? 6 : undefined,
     reporter: [['line'], ['allure-playwright']],
     use: {
-        headless: true,
+        headless: false,
         viewport: { width: 1280, height: 720 },
         ignoreHTTPSErrors: true,
         video: 'retain-on-failure',
