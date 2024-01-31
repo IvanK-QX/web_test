@@ -30,16 +30,16 @@ export class ApiProfilePage {
         console.log(`Profile has been changed`)
     }
 
-    async getProfile(url: string, userToken: string, userEmail: string) {
+    async getProfile(url: string, userToken: string) {
         const apiContext = await request.newContext({ ignoreHTTPSErrors: true })
         const headers = Headers.userHeader(userToken)
 
         const apiRequest = await apiContext.get(`${url}:3000/profile`, { headers: headers })
         const response = await apiRequest.json()
         expect(apiRequest.ok()).toBeTruthy()
-        const email = response.email
-        expect(email).toEqual(userEmail)
-        console.log(`Profile for user: ${userEmail} has been dispalyed`)
+        const payoneerEmail = response.payoutEmail || null
+        const binanceWallet = response.cryptoWallet || null
+        return { payoneerEmail, binanceWallet }
     }
 
     async search(url: string, userToken: string, searchText: string) {
