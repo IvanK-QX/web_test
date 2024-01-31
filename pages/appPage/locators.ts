@@ -24,8 +24,6 @@ export const locators = {
     referralPage: {
         referralProgramBtn: '[href="/referral"]',
         referralProgramPageTitle: '[class*="header-title header-title"]',
-        //referralCode: '//*[@id="app"]/div/div[1]/div/div/div/div/div/section/div[1]/div[1]/label/span[2]/input', //???
-        //myAgentCodeInput: '//*[@id="app"]/div/div[1]/div/div/div/div/div/section/div[2]/div/label/span[2]/input', //???
         myAgentId: '[class="user-simple-card__content--uid"]',
         agentAvatarBtn: '[class="ui-avatar user-simple-card__avatar"]',
         otherUserProfileId: '[class="profile-info__human-id--text"]',
