@@ -87,9 +87,10 @@ export class ApiLoginPage {
         const country = response.profile.lastGeo.country
         const referalLink = response.profile.referalLink
         const abTests = response.profile.abTests
+        const profile = response.profile
         expect(response.profile.status).toEqual('Active')
         console.log(`User email: ${email} has been added`)
-        return { userToken, email, id, createdUser, name, createdGuest, humanReadableId, country, referalLink, abTests }
+        return { userToken, email, id, createdUser, name, createdGuest, humanReadableId, country, referalLink, abTests, profile }
     }
 
     async createNewUser(url: string) {

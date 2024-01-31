@@ -17,4 +17,19 @@ export const locators = {
         mediaMessage: 'div.chat-private-message-file__content',
         emojiBtn: 'button.chat-input-area__button-emoji-picker',
     },
+    mainPage: {
+        profileBtn: '[class="user-dropdown__name"]',
+        redeemCashBtn: '[href="/redeem-cash"]'
+    },
+    referralPage: {
+        referralProgramBtn: '[href="/referral"]',
+        referralProgramPageTitle: '[class*="header-title header-title"]',
+        myAgentId: '[class="user-simple-card__content--uid"]',
+        agentAvatarBtn: '[class="ui-avatar user-simple-card__avatar"]',
+        otherUserProfileId: '[class="profile-info__human-id--text"]',
+        copyBanner: '[class="notification-global__text body"]',
+        myReferralsBtn: '[class="ui-button ui-button"]',
+        myReferralId: '[class="user-simple-card__content--uid"]'
+        
+    }
 }
