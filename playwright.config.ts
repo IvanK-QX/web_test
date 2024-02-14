@@ -13,7 +13,7 @@ const config: PlaywrightTestConfig = {
     reportSlowTests: { max: 0, threshold: 60001 },
     forbidOnly: !!process.env.CI,
     retries: 2,
-    workers: process.env.CI ? 6 : undefined,
+    workers: process.env.CI ? 6 : 6,
     reporter: [['line'], ['allure-playwright']],
     use: {
         headless: true,
