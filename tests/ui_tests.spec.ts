@@ -6,7 +6,7 @@ import { Api } from '../pages/Api'
 
 let streamer, watcher, newPage, watcherPage
 
-test.describe.only('UI Tests', async () => {
+test.describe('UI Tests', async () => {
     test.beforeEach(async ({ page, browser }) => {
         const apiContext = await request.newContext()
         const contetext = await browser.newContext()
@@ -22,14 +22,12 @@ test.describe.only('UI Tests', async () => {
     test('Star sand Join Stream', async ({ page }) => {
         const app = new App(page)
         const watcherPage = new App(newPage)
-        await app.ediProfilePage.open()
         await app.sidePanelPage.clickCreateStreamBtn()
         await app.preStreamPage.changeStreamTitle()
         await app.preStreamPage.clickStartStreamBtn()
         await app.preStreamPage.uploadAvatar()
         await app.preStreamPage.clickStartStreamBtn()
         await app.preStreamPage.observeStream()
-        await watcherPage.sidePanelPage.clickCreateStreamBtn()
         await page.waitForTimeout(1000)
         await watcherPage.mainPage.open()
         await watcherPage.mainPage.joinStream(streamer.name)
