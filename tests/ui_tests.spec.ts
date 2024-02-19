@@ -6,7 +6,7 @@ import { Api } from '../pages/Api'
 
 let streamer, watcher, newPage, watcherPage
 
-test.describe('UI Tests', async () => {
+test.describe.only('UI Tests', async () => {
     test.beforeEach(async ({ page, browser }) => {
         const apiContext = await request.newContext()
         const contetext = await browser.newContext()
