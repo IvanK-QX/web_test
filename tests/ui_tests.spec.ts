@@ -5,7 +5,7 @@ import { streamerAndWatcherFixture } from '../fixtures/fixtures'
 
 let streamer_user, watcher_user
 
-streamerAndWatcherFixture.describe.only('UI Tests', async () => {
+streamerAndWatcherFixture.describe('UI Tests', async () => {
     streamerAndWatcherFixture.beforeEach(async ({ streamer, watcher }) => {
         streamer_user = await streamer.app.loginPage.apiLogin(apiUrl.qaEnvUrl)
         watcher_user = await watcher.app.loginPage.apiLogin(apiUrl.qaEnvUrl)
