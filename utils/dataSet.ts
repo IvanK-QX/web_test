@@ -9,7 +9,7 @@ export const apiDataSet = {
     searchText: '50cent',
     email: 'myleadsp.ace',
     password: 'dp1181345',
-    streamTitle: 'My stream Title',
+    streamTitle: `Stream-${Math.floor(Math.random() * 1000) + 1}`,
     updatedStreamTitle: 'My updated title',
     isoDate: new Date().toISOString(),
     randomWord: `word${(Math.random() + 1).toString(36).substring(7)}`,

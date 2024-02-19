@@ -17,10 +17,12 @@ export const locators = {
         mediaMessage: 'div.chat-private-message-file__content',
         emojiBtn: 'button.chat-input-area__button-emoji-picker',
     },
+    
     mainPage: {
         profileBtn: '[class="user-dropdown__name"]',
         redeemCashBtn: '[href="/redeem-cash"]'
     },
+
     redeemCashPage: {
         redeemCashTitle: '[class*="header-title header-title--main header-title--desktop"]',
         redeemCashProgressBar: '[class="progress-bar redeem-card__progress-bar"]', 
@@ -47,6 +49,16 @@ export const locators = {
         changePayoutConfirmationCancelBtn: '[class*="ui-button--color-light-primary ui-button--size-lg"]',
         changePayoutConfirmationChangeBtn: '[class*="ui-button ui-button--full-width ui-button--color-primary"]',
         cashOutDoneOkBtn: '[class*="ui-button ui-button--full-width ui-button--color-primary"]',
-        addedPayoutCard: '[class="ui-image payment-method__icon"]' 
+        addedPayoutCard: '[class="ui-image payment-method__icon"]',
+        redeemInput: '[class="ui-input__input redeem-card__redeem-withdrawal-input"]',
+        redeemCashBtn: '[class*="ui-button ui-button--color-primary ui-button--size-lg redeem-card__redeem-submit-button"]',
+        redeemHistoryTable: '[class="redeem-history__list-header"]'
+    },
+
+    streamPage: {
+        endStreamBtn: '[class*="stream-button-close stream-button-close--create"]',
+        confirmEndStreamBtn: '[class*="ui-button__text--fill ui-button__text"]',
+        closeEndStreamPopUpBtn: '[class*="modal-close"]'
+
     }
 }

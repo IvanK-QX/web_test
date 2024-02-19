@@ -16,6 +16,7 @@ test.describe('UI Stream Tests With Two Users', async () => {
         streamer = await app.loginPage.apiLogin(apiUrl.qaEnvUrl)
         watcher = await watcherPage.loginPage.apiLogin(apiUrl.qaEnvUrl)
         await api.followingPage.follow(apiUrl.qaEnvUrl, watcher.userToken, streamer.id)
+        console.log(streamer.id)
     })
 
     test('Send Gift in Stream', async ({ page }) => {
@@ -23,7 +24,7 @@ test.describe('UI Stream Tests With Two Users', async () => {
         const watcherPage = new App(newPage)
         await app.ediProfilePage.open()
         await app.sidePanelPage.clickCreateStreamBtn()
-        await app.preStreamPage.changeStreamTitle()
+        await app.preStreamPage.changeStreamTitle('lets go')
         await app.preStreamPage.clickStartStreamBtn()
         await app.preStreamPage.uploadAvatar()
         await app.preStreamPage.clickStartStreamBtn()

@@ -1,6 +1,8 @@
 import { expect, Page, request } from '@playwright/test'
+import { Collection } from 'mongodb'
 import { apiUrl } from '../../utils/apiUrl'
 import { Api } from '../Api'
+import { getItemByItemId } from '../dataBase/mongoDB_page'
 import { locators } from './locators'
 
 export class AppRedeemCashPage {
@@ -103,18 +105,47 @@ export class AppRedeemCashPage {
 
     async clickRedeemHistoryBtn() {
         await this.page.locator(locators.redeemCashPage.redeemHistoryBtn).click()
+        await this.page.locator(locators.redeemCashPage.redeemHistoryTable).isVisible()
     }
 
     async randomBinanceWalletGenerator() {
-        const length = 34;
+        const length = 33;
         const characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ234567';
         const wallet = Array.from({ length }, () => characters[Math.floor(Math.random() * characters.length)]).join('');
-        return wallet;
+        const binanceWallet = 'T' + wallet
+        return binanceWallet
     }
 
     async clickAddBinanceBtn() {
         await this.page.locator(locators.redeemCashPage.addBinanceBtn).click()
     }
 
+    async redeemAmountInput(redeemValue: string) {
+        await this.page.locator(locators.redeemCashPage.redeemInput).fill(redeemValue)
+    }
 
+    async cickRedeemBtn() {
+        await this.page.locator(locators.redeemCashPage.redeemCashBtn).click()
+    }
+
+    async cickCashOutRedeemBtn() {
+        await this.page.locator(locators.redeemCashPage.cashOutRedeemBtn).click()
+    }
+
+    async cickCashOutOkBtn() {
+        await this.page.waitForTimeout(1000)
+        await this.page.locator(locators.redeemCashPage.cashOutDoneOkBtn).click()
+    }
+
+    async checkPayoneerEmailInMongoDB(collection: Collection, userId: string, expectedPayoneerEmail: string) {
+        const result = await getItemByItemId(collection, userId)
+        const returnedPaymentMethod = result[0].payoutEmail
+        expect(returnedPaymentMethod).toEqual(expectedPayoneerEmail)
+    }
+
+    async checkBinanceWalletInMongoDB(collection: Collection, userId: string, expectedBinanceWallet: string) {
+        const result = await getItemByItemId(collection, userId)
+        const returnedBinanceMethod = result[0].cryptoWallet
+        expect(returnedBinanceMethod).toEqual(expectedBinanceWallet)
+    }
 }

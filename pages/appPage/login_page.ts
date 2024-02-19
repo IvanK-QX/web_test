@@ -31,6 +31,7 @@ export class AppLoginPage {
         const humanReadableId = user.humanReadableId
         const diamonds = user.diamonds
         await api.slackPage.addCoins(humanReadableId)
+        //await api.slackPage.disableCloacing(humanReadableId)
         return { userToken, id, name, humanReadableId, diamonds }
     }
 }
