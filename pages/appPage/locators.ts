@@ -59,5 +59,17 @@ export const locators = {
         confirmEndStreamBtn: '[class*="ui-button__text--fill ui-button__text"]',
         closeEndStreamPopUpBtn: '[class*="modal-close"]'
 
+    },
+    
+    referralPage: {
+        referralProgramBtn: '[href="/referral"]',
+        referralProgramPageTitle: '[class*="header-title header-title"]',
+        myAgentId: '[class="user-simple-card__content--uid"]',
+        agentAvatarBtn: '[class="ui-avatar user-simple-card__avatar"]',
+        otherUserProfileId: '[class="profile-info__human-id--text"]',
+        copyBanner: '[class="notification-global__text body"]',
+        myReferralsBtn: '[class="ui-button ui-button"]',
+        myReferralId: '[class="user-simple-card__content--uid"]'
+        
     }
 }
