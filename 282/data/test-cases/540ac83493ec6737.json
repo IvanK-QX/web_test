@@ -1,0 +1,378 @@
+{
+  "uid" : "540ac83493ec6737",
+  "name" : "Chats - Message Validation",
+  "fullName" : "ui_chats_test.spec.ts#UI - Chat Page With Two Users Chats - Message Validation",
+  "historyId" : "509769bb68751b903bfd8de1e5478a20:5bd835b0d6b1d4ada3b9f0db936e82c8",
+  "time" : {
+    "start" : 1708351228890,
+    "stop" : 1708351229690,
+    "duration" : 800
+  },
+  "status" : "failed",
+  "statusMessage" : "Error: browserType.launch: Target page, context or browser has been closed\nBrowser logs:\n\n╔════════════════════════════════════════════════════════════════════════════════════════════════╗\n║ Looks like you launched a headed browser without having a XServer running.                     ║\n║ Set either 'headless: true' or use 'xvfb-run <your-playwright-app>' before running Playwright. ║\n║                                                                                                ║\n║ <3 Playwright Team                                                                             ║\n╚════════════════════════════════════════════════════════════════════════════════════════════════╝\nCall log:\n  - <launching> /home/runner/.cache/ms-playwright/chromium-1091/chrome-linux/chrome --disable-field-trial-config --disable-background-networking --enable-features=NetworkService,NetworkServiceInProcess --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --no-sandbox --use-fake-ui-for-media-stream --use-fake-device-for-media-stream --user-data-dir=/tmp/playwright_chromiumdev_profile-PzudNE --remote-debugging-pipe --no-startup-window\n  - <launched> pid=6639\n  - [pid=6639][err] [6639:6639:0219/140029.610675:ERROR:ozone_platform_x11.cc(239)] Missing X server or $DISPLAY\n  - [pid=6639][err] [6639:6639:0219/140029.610723:ERROR:env.cc(257)] The platform failed to initialize.  Exiting.\n",
+  "statusTrace" : "Error: browserType.launch: Target page, context or browser has been closed\nBrowser logs:\n\n╔════════════════════════════════════════════════════════════════════════════════════════════════╗\n║ Looks like you launched a headed browser without having a XServer running.                     ║\n║ Set either 'headless: true' or use 'xvfb-run <your-playwright-app>' before running Playwright. ║\n║                                                                                                ║\n║ <3 Playwright Team                                                                             ║\n╚════════════════════════════════════════════════════════════════════════════════════════════════╝\nCall log:\n  - <launching> /home/runner/.cache/ms-playwright/chromium-1091/chrome-linux/chrome --disable-field-trial-config --disable-background-networking --enable-features=NetworkService,NetworkServiceInProcess --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --no-sandbox --use-fake-ui-for-media-stream --use-fake-device-for-media-stream --user-data-dir=/tmp/playwright_chromiumdev_profile-PzudNE --remote-debugging-pipe --no-startup-window\n  - <launched> pid=6639\n  - [pid=6639][err] [6639:6639:0219/140029.610675:ERROR:ozone_platform_x11.cc(239)] Missing X server or $DISPLAY\n  - [pid=6639][err] [6639:6639:0219/140029.610723:ERROR:env.cc(257)] The platform failed to initialize.  Exiting.\n\n",
+  "flaky" : true,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "failed",
+    "statusMessage" : "Error: browserType.launch: Target page, context or browser has been closed\nBrowser logs:\n\n╔════════════════════════════════════════════════════════════════════════════════════════════════╗\n║ Looks like you launched a headed browser without having a XServer running.                     ║\n║ Set either 'headless: true' or use 'xvfb-run <your-playwright-app>' before running Playwright. ║\n║                                                                                                ║\n║ <3 Playwright Team                                                                             ║\n╚════════════════════════════════════════════════════════════════════════════════════════════════╝\nCall log:\n  - <launching> /home/runner/.cache/ms-playwright/chromium-1091/chrome-linux/chrome --disable-field-trial-config --disable-background-networking --enable-features=NetworkService,NetworkServiceInProcess --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --no-sandbox --use-fake-ui-for-media-stream --use-fake-device-for-media-stream --user-data-dir=/tmp/playwright_chromiumdev_profile-PzudNE --remote-debugging-pipe --no-startup-window\n  - <launched> pid=6639\n  - [pid=6639][err] [6639:6639:0219/140029.610675:ERROR:ozone_platform_x11.cc(239)] Missing X server or $DISPLAY\n  - [pid=6639][err] [6639:6639:0219/140029.610723:ERROR:env.cc(257)] The platform failed to initialize.  Exiting.\n",
+    "statusTrace" : "Error: browserType.launch: Target page, context or browser has been closed\nBrowser logs:\n\n╔════════════════════════════════════════════════════════════════════════════════════════════════╗\n║ Looks like you launched a headed browser without having a XServer running.                     ║\n║ Set either 'headless: true' or use 'xvfb-run <your-playwright-app>' before running Playwright. ║\n║                                                                                                ║\n║ <3 Playwright Team                                                                             ║\n╚════════════════════════════════════════════════════════════════════════════════════════════════╝\nCall log:\n  - <launching> /home/runner/.cache/ms-playwright/chromium-1091/chrome-linux/chrome --disable-field-trial-config --disable-background-networking --enable-features=NetworkService,NetworkServiceInProcess --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --no-sandbox --use-fake-ui-for-media-stream --use-fake-device-for-media-stream --user-data-dir=/tmp/playwright_chromiumdev_profile-PzudNE --remote-debugging-pipe --no-startup-window\n  - <launched> pid=6639\n  - [pid=6639][err] [6639:6639:0219/140029.610675:ERROR:ozone_platform_x11.cc(239)] Missing X server or $DISPLAY\n  - [pid=6639][err] [6639:6639:0219/140029.610723:ERROR:env.cc(257)] The platform failed to initialize.  Exiting.\n\n",
+    "steps" : [ {
+      "name" : "Before Hooks",
+      "time" : {
+        "start" : 1708351228937,
+        "stop" : 1708351229649,
+        "duration" : 712
+      },
+      "status" : "failed",
+      "statusMessage" : "Error: browserType.launch: Target page, context or browser has been closed\nBrowser logs:\n\n╔════════════════════════════════════════════════════════════════════════════════════════════════╗\n║ Looks like you launched a headed browser without having a XServer running.                     ║\n║ Set either 'headless: true' or use 'xvfb-run <your-playwright-app>' before running Playwright. ║\n║                                                                                                ║\n║ <3 Playwright Team                                                                             ║\n╚════════════════════════════════════════════════════════════════════════════════════════════════╝\nCall log:\n  - <launching> /home/runner/.cache/ms-playwright/chromium-1091/chrome-linux/chrome --disable-field-trial-config --disable-background-networking --enable-features=NetworkService,NetworkServiceInProcess --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --no-sandbox --use-fake-ui-for-media-stream --use-fake-device-for-media-stream --user-data-dir=/tmp/playwright_chromiumdev_profile-PzudNE --remote-debugging-pipe --no-startup-window\n  - <launched> pid=6639\n  - [pid=6639][err] [6639:6639:0219/140029.610675:ERROR:ozone_platform_x11.cc(239)] Missing X server or $DISPLAY\n  - [pid=6639][err] [6639:6639:0219/140029.610723:ERROR:env.cc(257)] The platform failed to initialize.  Exiting.\n",
+      "statusTrace" : "Error: browserType.launch: Target page, context or browser has been closed\nBrowser logs:\n\n╔════════════════════════════════════════════════════════════════════════════════════════════════╗\n║ Looks like you launched a headed browser without having a XServer running.                     ║\n║ Set either 'headless: true' or use 'xvfb-run <your-playwright-app>' before running Playwright. ║\n║                                                                                                ║\n║ <3 Playwright Team                                                                             ║\n╚════════════════════════════════════════════════════════════════════════════════════════════════╝\nCall log:\n  - <launching> /home/runner/.cache/ms-playwright/chromium-1091/chrome-linux/chrome --disable-field-trial-config --disable-background-networking --enable-features=NetworkService,NetworkServiceInProcess --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --no-sandbox --use-fake-ui-for-media-stream --use-fake-device-for-media-stream --user-data-dir=/tmp/playwright_chromiumdev_profile-PzudNE --remote-debugging-pipe --no-startup-window\n  - <launched> pid=6639\n  - [pid=6639][err] [6639:6639:0219/140029.610675:ERROR:ozone_platform_x11.cc(239)] Missing X server or $DISPLAY\n  - [pid=6639][err] [6639:6639:0219/140029.610723:ERROR:env.cc(257)] The platform failed to initialize.  Exiting.\n\n",
+      "steps" : [ {
+        "name" : "beforeEach hook",
+        "time" : {
+          "start" : 1708351228939,
+          "stop" : 1708351229649,
+          "duration" : 710
+        },
+        "status" : "failed",
+        "statusMessage" : "Error: browserType.launch: Target page, context or browser has been closed\nBrowser logs:\n\n╔════════════════════════════════════════════════════════════════════════════════════════════════╗\n║ Looks like you launched a headed browser without having a XServer running.                     ║\n║ Set either 'headless: true' or use 'xvfb-run <your-playwright-app>' before running Playwright. ║\n║                                                                                                ║\n║ <3 Playwright Team                                                                             ║\n╚════════════════════════════════════════════════════════════════════════════════════════════════╝\nCall log:\n  - <launching> /home/runner/.cache/ms-playwright/chromium-1091/chrome-linux/chrome --disable-field-trial-config --disable-background-networking --enable-features=NetworkService,NetworkServiceInProcess --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --no-sandbox --use-fake-ui-for-media-stream --use-fake-device-for-media-stream --user-data-dir=/tmp/playwright_chromiumdev_profile-PzudNE --remote-debugging-pipe --no-startup-window\n  - <launched> pid=6639\n  - [pid=6639][err] [6639:6639:0219/140029.610675:ERROR:ozone_platform_x11.cc(239)] Missing X server or $DISPLAY\n  - [pid=6639][err] [6639:6639:0219/140029.610723:ERROR:env.cc(257)] The platform failed to initialize.  Exiting.\n",
+        "statusTrace" : "Error: browserType.launch: Target page, context or browser has been closed\nBrowser logs:\n\n╔════════════════════════════════════════════════════════════════════════════════════════════════╗\n║ Looks like you launched a headed browser without having a XServer running.                     ║\n║ Set either 'headless: true' or use 'xvfb-run <your-playwright-app>' before running Playwright. ║\n║                                                                                                ║\n║ <3 Playwright Team                                                                             ║\n╚════════════════════════════════════════════════════════════════════════════════════════════════╝\nCall log:\n  - <launching> /home/runner/.cache/ms-playwright/chromium-1091/chrome-linux/chrome --disable-field-trial-config --disable-background-networking --enable-features=NetworkService,NetworkServiceInProcess --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --no-sandbox --use-fake-ui-for-media-stream --use-fake-device-for-media-stream --user-data-dir=/tmp/playwright_chromiumdev_profile-PzudNE --remote-debugging-pipe --no-startup-window\n  - <launched> pid=6639\n  - [pid=6639][err] [6639:6639:0219/140029.610675:ERROR:ozone_platform_x11.cc(239)] Missing X server or $DISPLAY\n  - [pid=6639][err] [6639:6639:0219/140029.610723:ERROR:env.cc(257)] The platform failed to initialize.  Exiting.\n\n",
+        "steps" : [ {
+          "name" : "fixture: browser",
+          "time" : {
+            "start" : 1708351229035,
+            "stop" : 1708351229648,
+            "duration" : 613
+          },
+          "status" : "failed",
+          "statusMessage" : "Error: browserType.launch: Target page, context or browser has been closed\nBrowser logs:\n\n╔════════════════════════════════════════════════════════════════════════════════════════════════╗\n║ Looks like you launched a headed browser without having a XServer running.                     ║\n║ Set either 'headless: true' or use 'xvfb-run <your-playwright-app>' before running Playwright. ║\n║                                                                                                ║\n║ <3 Playwright Team                                                                             ║\n╚════════════════════════════════════════════════════════════════════════════════════════════════╝\nCall log:\n  - <launching> /home/runner/.cache/ms-playwright/chromium-1091/chrome-linux/chrome --disable-field-trial-config --disable-background-networking --enable-features=NetworkService,NetworkServiceInProcess --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --no-sandbox --use-fake-ui-for-media-stream --use-fake-device-for-media-stream --user-data-dir=/tmp/playwright_chromiumdev_profile-PzudNE --remote-debugging-pipe --no-startup-window\n  - <launched> pid=6639\n  - [pid=6639][err] [6639:6639:0219/140029.610675:ERROR:ozone_platform_x11.cc(239)] Missing X server or $DISPLAY\n  - [pid=6639][err] [6639:6639:0219/140029.610723:ERROR:env.cc(257)] The platform failed to initialize.  Exiting.\n",
+          "statusTrace" : "Error: browserType.launch: Target page, context or browser has been closed\nBrowser logs:\n\n╔════════════════════════════════════════════════════════════════════════════════════════════════╗\n║ Looks like you launched a headed browser without having a XServer running.                     ║\n║ Set either 'headless: true' or use 'xvfb-run <your-playwright-app>' before running Playwright. ║\n║                                                                                                ║\n║ <3 Playwright Team                                                                             ║\n╚════════════════════════════════════════════════════════════════════════════════════════════════╝\nCall log:\n  - <launching> /home/runner/.cache/ms-playwright/chromium-1091/chrome-linux/chrome --disable-field-trial-config --disable-background-networking --enable-features=NetworkService,NetworkServiceInProcess --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --no-sandbox --use-fake-ui-for-media-stream --use-fake-device-for-media-stream --user-data-dir=/tmp/playwright_chromiumdev_profile-PzudNE --remote-debugging-pipe --no-startup-window\n  - <launched> pid=6639\n  - [pid=6639][err] [6639:6639:0219/140029.610675:ERROR:ozone_platform_x11.cc(239)] Missing X server or $DISPLAY\n  - [pid=6639][err] [6639:6639:0219/140029.610723:ERROR:env.cc(257)] The platform failed to initialize.  Exiting.\n\n",
+          "steps" : [ {
+            "name" : "browserType.launch",
+            "time" : {
+              "start" : 1708351229040,
+              "stop" : 1708351229648,
+              "duration" : 608
+            },
+            "status" : "failed",
+            "statusMessage" : "Error: browserType.launch: Target page, context or browser has been closed\nBrowser logs:\n\n╔════════════════════════════════════════════════════════════════════════════════════════════════╗\n║ Looks like you launched a headed browser without having a XServer running.                     ║\n║ Set either 'headless: true' or use 'xvfb-run <your-playwright-app>' before running Playwright. ║\n║                                                                                                ║\n║ <3 Playwright Team                                                                             ║\n╚════════════════════════════════════════════════════════════════════════════════════════════════╝\nCall log:\n  - <launching> /home/runner/.cache/ms-playwright/chromium-1091/chrome-linux/chrome --disable-field-trial-config --disable-background-networking --enable-features=NetworkService,NetworkServiceInProcess --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --no-sandbox --use-fake-ui-for-media-stream --use-fake-device-for-media-stream --user-data-dir=/tmp/playwright_chromiumdev_profile-PzudNE --remote-debugging-pipe --no-startup-window\n  - <launched> pid=6639\n  - [pid=6639][err] [6639:6639:0219/140029.610675:ERROR:ozone_platform_x11.cc(239)] Missing X server or $DISPLAY\n  - [pid=6639][err] [6639:6639:0219/140029.610723:ERROR:env.cc(257)] The platform failed to initialize.  Exiting.\n",
+            "statusTrace" : "Error: browserType.launch: Target page, context or browser has been closed\nBrowser logs:\n\n╔════════════════════════════════════════════════════════════════════════════════════════════════╗\n║ Looks like you launched a headed browser without having a XServer running.                     ║\n║ Set either 'headless: true' or use 'xvfb-run <your-playwright-app>' before running Playwright. ║\n║                                                                                                ║\n║ <3 Playwright Team                                                                             ║\n╚════════════════════════════════════════════════════════════════════════════════════════════════╝\nCall log:\n  - <launching> /home/runner/.cache/ms-playwright/chromium-1091/chrome-linux/chrome --disable-field-trial-config --disable-background-networking --enable-features=NetworkService,NetworkServiceInProcess --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --no-sandbox --use-fake-ui-for-media-stream --use-fake-device-for-media-stream --user-data-dir=/tmp/playwright_chromiumdev_profile-PzudNE --remote-debugging-pipe --no-startup-window\n  - <launched> pid=6639\n  - [pid=6639][err] [6639:6639:0219/140029.610675:ERROR:ozone_platform_x11.cc(239)] Missing X server or $DISPLAY\n  - [pid=6639][err] [6639:6639:0219/140029.610723:ERROR:env.cc(257)] The platform failed to initialize.  Exiting.\n\n",
+            "steps" : [ ],
+            "attachments" : [ ],
+            "parameters" : [ ],
+            "stepsCount" : 0,
+            "attachmentsCount" : 0,
+            "shouldDisplayMessage" : true,
+            "hasContent" : true
+          } ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 1,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 3,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "After Hooks",
+      "time" : {
+        "start" : 1708351229650,
+        "stop" : 1708351229689,
+        "duration" : 39
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ {
+      "uid" : "7af9df8c2f0dfc29",
+      "name" : "trace",
+      "source" : "7af9df8c2f0dfc29.zip",
+      "type" : "application/zip",
+      "size" : 2747
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 5,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "language",
+    "value" : "JavaScript"
+  }, {
+    "name" : "framework",
+    "value" : "Playwright"
+  }, {
+    "name" : "titlePath",
+    "value" : " > chromium > ui_chats_test.spec.ts > UI - Chat Page With Two Users"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1433-171"
+  }, {
+    "name" : "thread",
+    "value" : "fv-az1433-171-2407-playwright-worker-3"
+  }, {
+    "name" : "parentSuite",
+    "value" : "chromium"
+  }, {
+    "name" : "suite",
+    "value" : "ui_chats_test.spec.ts"
+  }, {
+    "name" : "subSuite",
+    "value" : "UI - Chat Page With Two Users"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "Project",
+    "value" : "chromium"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "af9cbbe25be7a9da",
+      "status" : "failed",
+      "statusDetails" : "Error: browserType.launch: Target page, context or browser has been closed\nBrowser logs:\n\n╔════════════════════════════════════════════════════════════════════════════════════════════════╗\n║ Looks like you launched a headed browser without having a XServer running.                     ║\n║ Set either 'headless: true' or use 'xvfb-run <your-playwright-app>' before running Playwright. ║\n║                                                                                                ║\n║ <3 Playwright Team                                                                             ║\n╚════════════════════════════════════════════════════════════════════════════════════════════════╝\nCall log:\n  - <launching> /home/runner/.cache/ms-playwright/chromium-1091/chrome-linux/chrome --disable-field-trial-config --disable-background-networking --enable-features=NetworkService,NetworkServiceInProcess --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --no-sandbox --use-fake-ui-for-media-stream --use-fake-device-for-media-stream --user-data-dir=/tmp/playwright_chromiumdev_profile-9THCVE --remote-debugging-pipe --no-startup-window\n  - <launched> pid=6110\n  - [pid=6110][err] [6110:6110:0219/140025.602158:ERROR:ozone_platform_x11.cc(239)] Missing X server or $DISPLAY\n  - [pid=6110][err] [6110:6110:0219/140025.602218:ERROR:env.cc(257)] The platform failed to initialize.  Exiting.\n",
+      "time" : {
+        "start" : 1708351224872,
+        "stop" : 1708351225762,
+        "duration" : 890
+      }
+    }, {
+      "uid" : "fd1af8bba9e26ecd",
+      "status" : "failed",
+      "statusDetails" : "Error: browserType.launch: Target page, context or browser has been closed\nBrowser logs:\n\n╔════════════════════════════════════════════════════════════════════════════════════════════════╗\n║ Looks like you launched a headed browser without having a XServer running.                     ║\n║ Set either 'headless: true' or use 'xvfb-run <your-playwright-app>' before running Playwright. ║\n║                                                                                                ║\n║ <3 Playwright Team                                                                             ║\n╚════════════════════════════════════════════════════════════════════════════════════════════════╝\nCall log:\n  - <launching> /home/runner/.cache/ms-playwright/chromium-1091/chrome-linux/chrome --disable-field-trial-config --disable-background-networking --enable-features=NetworkService,NetworkServiceInProcess --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --no-sandbox --use-fake-ui-for-media-stream --use-fake-device-for-media-stream --user-data-dir=/tmp/playwright_chromiumdev_profile-ojQVwR --remote-debugging-pipe --no-startup-window\n  - <launched> pid=5384\n  - [pid=5384][err] [5384:5384:0219/140021.145723:ERROR:ozone_platform_x11.cc(239)] Missing X server or $DISPLAY\n  - [pid=5384][err] [5384:5384:0219/140021.146351:ERROR:env.cc(257)] The platform failed to initialize.  Exiting.\n",
+      "time" : {
+        "start" : 1708351220614,
+        "stop" : 1708351221221,
+        "duration" : 607
+      }
+    } ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 22,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 174,
+        "unknown" : 0,
+        "total" : 196
+      },
+      "items" : [ {
+        "uid" : "678437293ead9a5b",
+        "reportUrl" : "https://IvanK-QX.github.io/web_test/281//#testresult/678437293ead9a5b",
+        "status" : "failed",
+        "statusDetails" : "Error: browserType.launch: Target page, context or browser has been closed\nBrowser logs:\n\n╔════════════════════════════════════════════════════════════════════════════════════════════════╗\n║ Looks like you launched a headed browser without having a XServer running.                     ║\n║ Set either 'headless: true' or use 'xvfb-run <your-playwright-app>' before running Playwright. ║\n║                                                                                                ║\n║ <3 Playwright Team                                                                             ║\n╚════════════════════════════════════════════════════════════════════════════════════════════════╝\nCall log:\n  - <launching> /home/runner/.cache/ms-playwright/chromium-1091/chrome-linux/chrome --disable-field-trial-config --disable-background-networking --enable-features=NetworkService,NetworkServiceInProcess --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --no-sandbox --use-fake-ui-for-media-stream --use-fake-device-for-media-stream --user-data-dir=/tmp/playwright_chromiumdev_profile-BiEZEA --remote-debugging-pipe --no-startup-window\n  - <launched> pid=6857\n  - [pid=6857][err] [6857:6857:0219/134629.494171:ERROR:ozone_platform_x11.cc(239)] Missing X server or $DISPLAY\n  - [pid=6857][err] [6857:6857:0219/134629.494217:ERROR:env.cc(257)] The platform failed to initialize.  Exiting.\n",
+        "time" : {
+          "start" : 1708350388797,
+          "stop" : 1708350389592,
+          "duration" : 795
+        }
+      }, {
+        "uid" : "166fa95fef4157b",
+        "reportUrl" : "https://IvanK-QX.github.io/web_test/280//#testresult/166fa95fef4157b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1708343118226,
+          "stop" : 1708343165075,
+          "duration" : 46849
+        }
+      }, {
+        "uid" : "c5a48c7c2d8144ae",
+        "reportUrl" : "https://IvanK-QX.github.io/web_test/279//#testresult/c5a48c7c2d8144ae",
+        "status" : "passed",
+        "time" : {
+          "start" : 1708331469134,
+          "stop" : 1708331533057,
+          "duration" : 63923
+        }
+      }, {
+        "uid" : "cf5db518ea59b256",
+        "reportUrl" : "https://IvanK-QX.github.io/web_test/278//#testresult/cf5db518ea59b256",
+        "status" : "passed",
+        "time" : {
+          "start" : 1708307237649,
+          "stop" : 1708307288846,
+          "duration" : 51197
+        }
+      }, {
+        "uid" : "1c4f73bd44bf8cb3",
+        "reportUrl" : "https://IvanK-QX.github.io/web_test/277//#testresult/1c4f73bd44bf8cb3",
+        "status" : "passed",
+        "time" : {
+          "start" : 1708265681217,
+          "stop" : 1708265747824,
+          "duration" : 66607
+        }
+      }, {
+        "uid" : "41f17f63f7b7a166",
+        "reportUrl" : "https://IvanK-QX.github.io/web_test/276//#testresult/41f17f63f7b7a166",
+        "status" : "passed",
+        "time" : {
+          "start" : 1708220979312,
+          "stop" : 1708221025131,
+          "duration" : 45819
+        }
+      }, {
+        "uid" : "7765eed178171996",
+        "reportUrl" : "https://IvanK-QX.github.io/web_test/275//#testresult/7765eed178171996",
+        "status" : "passed",
+        "time" : {
+          "start" : 1708179351574,
+          "stop" : 1708179421535,
+          "duration" : 69961
+        }
+      }, {
+        "uid" : "34566176083eba4d",
+        "reportUrl" : "https://IvanK-QX.github.io/web_test/274//#testresult/34566176083eba4d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1708134029848,
+          "stop" : 1708134096600,
+          "duration" : 66752
+        }
+      }, {
+        "uid" : "63d7566b90d2baf7",
+        "reportUrl" : "https://IvanK-QX.github.io/web_test/273//#testresult/63d7566b90d2baf7",
+        "status" : "passed",
+        "time" : {
+          "start" : 1708093031371,
+          "stop" : 1708093084691,
+          "duration" : 53320
+        }
+      }, {
+        "uid" : "cb2bf52568d949d3",
+        "reportUrl" : "https://IvanK-QX.github.io/web_test/272//#testresult/cb2bf52568d949d3",
+        "status" : "failed",
+        "statusDetails" : "Error: apiRequestContext.post: Request timed out after 20000ms\nCall log:\n  - → POST https://streamsqa.com:3000/login\n  -   user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.6099.28 Safari/537.36\n  -   accept: */*\n  -   accept-encoding: gzip,deflate,br\n  -   packagename: com.plamfy\n  -   content-type: application/json\n  -   appversion: 1\n  -   os: ios\n  -   content-length: 96\n",
+        "time" : {
+          "start" : 1708068584139,
+          "stop" : 1708068612447,
+          "duration" : 28308
+        }
+      }, {
+        "uid" : "f9616b0da2d6bb66",
+        "reportUrl" : "https://IvanK-QX.github.io/web_test/271//#testresult/f9616b0da2d6bb66",
+        "status" : "failed",
+        "statusDetails" : "Error: apiRequestContext.post: Request timed out after 20000ms\nCall log:\n  - → POST https://streamsqa.com:3000/login\n  -   user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.6099.28 Safari/537.36\n  -   accept: */*\n  -   accept-encoding: gzip,deflate,br\n  -   packagename: com.plamfy\n  -   content-type: application/json\n  -   appversion: 1\n  -   os: ios\n  -   content-length: 96\n",
+        "time" : {
+          "start" : 1708047852252,
+          "stop" : 1708047881014,
+          "duration" : 28762
+        }
+      }, {
+        "uid" : "a30c94b66b3a444c",
+        "reportUrl" : "https://IvanK-QX.github.io/web_test/270//#testresult/a30c94b66b3a444c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1708006583400,
+          "stop" : 1708006651940,
+          "duration" : 68540
+        }
+      }, {
+        "uid" : "8af7ac4d77e4d9d5",
+        "reportUrl" : "https://IvanK-QX.github.io/web_test/269//#testresult/8af7ac4d77e4d9d5",
+        "status" : "passed",
+        "time" : {
+          "start" : 1707961588790,
+          "stop" : 1707961625213,
+          "duration" : 36423
+        }
+      }, {
+        "uid" : "777c783198bfee60",
+        "reportUrl" : "https://IvanK-QX.github.io/web_test/268//#testresult/777c783198bfee60",
+        "status" : "passed",
+        "time" : {
+          "start" : 1707920200065,
+          "stop" : 1707920269630,
+          "duration" : 69565
+        }
+      }, {
+        "uid" : "1f4b959776f61dc8",
+        "reportUrl" : "https://IvanK-QX.github.io/web_test/267//#testresult/1f4b959776f61dc8",
+        "status" : "passed",
+        "time" : {
+          "start" : 1707898233649,
+          "stop" : 1707898296050,
+          "duration" : 62401
+        }
+      }, {
+        "uid" : "a6f15c0c97afc960",
+        "reportUrl" : "https://IvanK-QX.github.io/web_test/266//#testresult/a6f15c0c97afc960",
+        "status" : "passed",
+        "time" : {
+          "start" : 1707874979501,
+          "stop" : 1707875046030,
+          "duration" : 66529
+        }
+      }, {
+        "uid" : "a5450ccac7e6a5cf",
+        "reportUrl" : "https://IvanK-QX.github.io/web_test/265//#testresult/a5450ccac7e6a5cf",
+        "status" : "passed",
+        "time" : {
+          "start" : 1707833764870,
+          "stop" : 1707833836990,
+          "duration" : 72120
+        }
+      }, {
+        "uid" : "c5ec7ab275e881be",
+        "reportUrl" : "https://IvanK-QX.github.io/web_test/264//#testresult/c5ec7ab275e881be",
+        "status" : "passed",
+        "time" : {
+          "start" : 1707788521946,
+          "stop" : 1707788586933,
+          "duration" : 64987
+        }
+      }, {
+        "uid" : "5860563ee88398",
+        "reportUrl" : "https://IvanK-QX.github.io/web_test/263//#testresult/5860563ee88398",
+        "status" : "passed",
+        "time" : {
+          "start" : 1707747397658,
+          "stop" : 1707747449776,
+          "duration" : 52118
+        }
+      }, {
+        "uid" : "6094380ddb4ab59a",
+        "reportUrl" : "https://IvanK-QX.github.io/web_test/262//#testresult/6094380ddb4ab59a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1707702129491,
+          "stop" : 1707702197624,
+          "duration" : 68133
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "540ac83493ec6737.json",
+  "parameterValues" : [ "chromium" ]
+}
