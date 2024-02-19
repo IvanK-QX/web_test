@@ -29,7 +29,7 @@ export class AppStreamPage {
 
     async closeStreamAsStreamer() {
         await this.page.locator('button svg.stream-button-close__icon').click()
-        await this.page.locator('button.confirm-modal__buttons--second').click()
+        await this.page.getByRole('button', { name: 'Confirm'}).click()
         await this.page.locator('.modal-close').click()
         await this.page.waitForURL(`${apiUrl.qaUiUrl}`)
     }

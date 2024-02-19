@@ -1,40 +1,27 @@
-import { request, test } from '@playwright/test'
 import { apiUrl } from '../utils/apiUrl'
-import { App } from '../pages/App'
-import { Api } from '../pages/Api'
+import { streamerAndWatcherFixture } from '../fixtures/fixtures'
 
-let streamer, watcher, newPage, watcherPage
+let streamer_user, watcher_user
 
-test.describe('UI Stream Tests With Two Users', async () => {
-    test.beforeEach(async ({ page, browser }) => {
-        const apiContext = await request.newContext()
-        const contetext = await browser.newContext()
-        newPage = await contetext.newPage()
-        const app = new App(page)
-        const api = new Api(apiContext)
-        watcherPage = new App(newPage)
-        streamer = await app.loginPage.apiLogin(apiUrl.qaEnvUrl)
-        watcher = await watcherPage.loginPage.apiLogin(apiUrl.qaEnvUrl)
-        await api.followingPage.follow(apiUrl.qaEnvUrl, watcher.userToken, streamer.id)
-        console.log(streamer.id)
+streamerAndWatcherFixture.describe('UI Stream Tests With Two Users', async () => {
+    streamerAndWatcherFixture.beforeEach(async ({ streamer, watcher }) => {
+        streamer_user = await streamer.app.loginPage.apiLogin(apiUrl.qaEnvUrl)
+        watcher_user = await watcher.app.loginPage.apiLogin(apiUrl.qaEnvUrl)
+        await streamer.api.followingPage.follow(apiUrl.qaEnvUrl, watcher_user.userToken, streamer_user.id)
     })
 
-    test('Send Gift in Stream', async ({ page }) => {
-        const app = new App(page)
-        const watcherPage = new App(newPage)
-        await app.ediProfilePage.open()
-        await app.sidePanelPage.clickCreateStreamBtn()
-        await app.preStreamPage.changeStreamTitle('lets go')
-        await app.preStreamPage.clickStartStreamBtn()
-        await app.preStreamPage.uploadAvatar()
-        await app.preStreamPage.clickStartStreamBtn()
-        await app.preStreamPage.observeStream()
-        await watcherPage.sidePanelPage.clickCreateStreamBtn()
+    streamerAndWatcherFixture('Send Gift in Stream', async ({ streamer, watcher, page }) => {
+        await streamer.app.sidePanelPage.clickCreateStreamBtn()
+        await streamer.app.preStreamPage.changeStreamTitle('lets go')
+        await streamer.app.preStreamPage.clickStartStreamBtn()
+        await streamer.app.preStreamPage.uploadAvatar()
+        await streamer.app.preStreamPage.clickStartStreamBtn()
+        await streamer.app.preStreamPage.observeStream()
         await page.waitForTimeout(1000)
-        await watcherPage.mainPage.open()
-        await watcherPage.mainPage.joinStream(streamer.name)
-        await watcherPage.streamPage.waitForStreamLoadingWatcher()
-        await watcherPage.streamPage.sentGift(watcher.name, 'flame_v1')
-        await app.streamPage.observeRecivedGift(watcher.name, 'flame_v1') 
+        await watcher.app.mainPage.open()
+        await watcher.app.mainPage.joinStream(streamer_user.name)
+        await watcher.app.streamPage.waitForStreamLoadingWatcher()
+        await watcher.app.streamPage.sentGift(watcher_user.name, 'flame_v1')
+        await streamer.app.streamPage.observeRecivedGift(watcher_user.name, 'flame_v1') 
     })
 })

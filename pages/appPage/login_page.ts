@@ -1,6 +1,5 @@
 import { APIRequestContext, request, Page } from '@playwright/test'
 import { Api } from '../Api'
-import { apiUrl } from '../../utils/apiUrl'
 import { apiDataSet } from '../../utils/dataSet'
 export class AppLoginPage {
     apiContext: APIRequestContext
@@ -13,8 +12,6 @@ export class AppLoginPage {
     async apiLogin(url: string) {
         const apiContext = await request.newContext({ ignoreHTTPSErrors: true })
         const api = new Api(apiContext)
-        await this.page.goto(`${apiUrl.qaUiUrl}`)
-        await this.page.waitForLoadState('domcontentloaded')
         const login = await api.loginPage.login(`${url}:3000/login`)
         const user = await api.loginPage.addEmail(`${url}:3000/login`, login.token, apiDataSet.deviceUUID)
         await this.page.reload()
