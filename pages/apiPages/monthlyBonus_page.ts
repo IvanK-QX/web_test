@@ -137,7 +137,6 @@ export class ApiMonthlyBonusPage {
         }
 
         console.log('Items generation success')
-        console.log(userId)
     }
 
     async checkStreamerMonthlyBonusItem(collection: Collection, userId: string, typeOfUser: string, dollarPrice: number) {
