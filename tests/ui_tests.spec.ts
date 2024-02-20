@@ -14,7 +14,7 @@ streamerAndWatcherFixture.describe('UI Tests', async () => {
 
     streamerAndWatcherFixture('Star sand Join Stream', async ({ page, streamer, watcher }) => {
         await streamer.app.sidePanelPage.clickCreateStreamBtn()
-        await streamer.app.preStreamPage.changeStreamTitle('lets go')
+        await streamer.app.preStreamPage.changeStreamTitle()
         await streamer.app.preStreamPage.clickStartStreamBtn()
         await streamer.app.preStreamPage.uploadAvatar()
         await streamer.app.preStreamPage.clickStartStreamBtn()

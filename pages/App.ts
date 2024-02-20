@@ -9,8 +9,6 @@ import { AppChatPage } from './appPage/chat_page'
 import { AppBlockedPage } from './appPage/blocked_page'
 import { AppProfilePage } from './appPage/profile_page'
 import { AppRedeemCashPage } from './appPage/redeemCash_page'
-import { AppReferralPage } from './appPage/referralProgram_page'
-
 
 export class App {
     page: Page
@@ -24,7 +22,6 @@ export class App {
     blockedPage: AppBlockedPage
     profilePage: AppProfilePage
     redeemCashPage: AppRedeemCashPage
-    referralPage: AppReferralPage
 
     constructor(page: Page) {
         this.page = page
@@ -38,7 +35,5 @@ export class App {
         this.blockedPage = new AppBlockedPage(this.page)
         this.profilePage = new AppProfilePage(this.page)
         this.redeemCashPage = new AppRedeemCashPage(this.page)
-        this.referralPage = new AppReferralPage(this.page)
-        
     }
 }
