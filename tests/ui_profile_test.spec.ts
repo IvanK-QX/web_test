@@ -1,15 +1,13 @@
-import { test } from '@playwright/test'
 import { apiUrl } from '../utils/apiUrl'
 import { apiDataSet } from '../utils/dataSet'
-import { App } from '../pages/App'
+import { streamerAndWatcherFixture } from '../fixtures/fixtures'
 
 let user
 
-test.describe('UI - Profile Tests', async () => {
-    test.beforeEach(async ({ page }) => {
-        const app = new App(page)
-        user = await app.loginPage.apiLogin(apiUrl.qaEnvUrl)
-        await app.profilePage.open()
+streamerAndWatcherFixture.describe('UI - Profile Tests', async () => {
+    streamerAndWatcherFixture.beforeEach(async ({ streamer }) => {
+        user = await streamer.app.loginPage.apiLogin(apiUrl.qaEnvUrl)
+        await streamer.app.profilePage.open()
     })
 
     // test.afterEach(async () => {
@@ -18,46 +16,40 @@ test.describe('UI - Profile Tests', async () => {
     //     await api.deleteAccountPage.deleteAccount(apiUrl.qaEnvUrl, user.userToken)
     // })
 
-    test('Profile - My Info', async ({ page }) => {
-        const app = new App(page)
-        await app.profilePage.observeStartStreamButton()
-        await app.profilePage.observeBuyCoinsButton()
-        await app.profilePage.observePersonalInfo(user.name)
+    streamerAndWatcherFixture('Profile - My Info', async ({ streamer }) => {
+        await streamer.app.profilePage.observeStartStreamButton()
+        await streamer.app.profilePage.observeBuyCoinsButton()
+        await streamer.app.profilePage.observePersonalInfo(user.name)
     })
 
-    test('Profile - Buy Coins', async ({ page }) => {
-        const app = new App(page)
-        await app.profilePage.clickBuyCoinsBtn()
+    streamerAndWatcherFixture('Profile - Buy Coins', async ({ streamer }) => {
+        await streamer.app.profilePage.clickBuyCoinsBtn()
     })
 
-    test('Profile - Start Stream', async ({ page }) => {
-        const app = new App(page)
-        await app.profilePage.clickStartStreamBtn()
+    streamerAndWatcherFixture('Profile - Start Stream', async ({ streamer }) => {
+        await streamer.app.profilePage.clickStartStreamBtn()
     })
 
-    test('Profile - Edit Profile', async ({ page }) => {
-        const app = new App(page)
-        await app.profilePage.clickKebabMenuBtn()
-        await app.profilePage.clickEditProfileBtn()
+    streamerAndWatcherFixture('Profile - Edit Profile', async ({ streamer }) => {
+        await streamer.app.profilePage.clickKebabMenuBtn()
+        await streamer.app.profilePage.clickEditProfileBtn()
     })
 
-    test('Profile - Redeem Cash', async ({ page }) => {
-        const app = new App(page)
-        await app.profilePage.clickKebabMenuBtn()
-        await app.profilePage.clickRedeemCashBtn()
+    streamerAndWatcherFixture('Profile - Redeem Cash', async ({ streamer }) => {
+        await streamer.app.profilePage.clickKebabMenuBtn()
+        await streamer.app.profilePage.clickRedeemCashBtn()
     })
 
-    test('Profile - Edit Profile e2e', async ({ page }) => {
-        const app = new App(page)
+    streamerAndWatcherFixture('Profile - Edit Profile e2e', async ({ streamer }) => {
         const name = apiDataSet.randomName
         const bio = apiDataSet.randomBio
-        await app.ediProfilePage.open()
-        await app.ediProfilePage.chageName(name)
-        await app.ediProfilePage.chageBio(bio)
+        await streamer.app.ediProfilePage.open()
+        await streamer.app.ediProfilePage.chageName(name)
+        await streamer.app.ediProfilePage.chageBio(bio)
         // await app.ediProfilePage.selectDate()
-        await app.ediProfilePage.clickSaveBtn()
-        await app.profilePage.open()
-        await app.profilePage.observeMyBio(bio)
-        await app.profilePage.observePersonalInfo(name)
+        await streamer.app.ediProfilePage.clickSaveBtn()
+        await streamer.app.profilePage.open()
+        await streamer.app.profilePage.observeMyBio(bio)
+        await streamer.app.profilePage.observePersonalInfo(name)
     })
 })
