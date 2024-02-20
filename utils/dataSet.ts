@@ -9,7 +9,7 @@ export const apiDataSet = {
     searchText: '50cent',
     email: 'myleadsp.ace',
     password: 'dp1181345',
-    streamTitle: 'My stream Title',
+    streamTitle: `Stream-${Math.floor(Math.random() * 1000) + 1}`,
     updatedStreamTitle: 'My updated title',
     isoDate: new Date().toISOString(),
     randomWord: `word${(Math.random() + 1).toString(36).substring(7)}`,
@@ -24,7 +24,7 @@ export const apiDataSet = {
 }
 
 export const texts = {
-    streamTitleInappropriateError: 'Your title includes inappropriate expression. Please, add another title',
+    streamTitleInappropriateError: 'Your title includes inappropriate expression. Please, add another title.',
     unblockChatText: '45 coin/message',
     plamfySupportText: 'Plamfy Support',
     blockUserConfirmationText: 'Are you sure you want to block this user?',

@@ -221,6 +221,22 @@ export class ApiModeratorPage {
         console.log(`The Name: ${randomName} and Email: ${randomPayoneerEmail} of the User: ${userId} are updated`)
     }
 
+    async setActiveStatus(url: string, adminToken: string, userId: string) {
+        const apiContext = await request.newContext({ ignoreHTTPSErrors: true })
+        const data = {
+            userId: `${userId}`,
+            action: 'updateFields',
+            updateFields: {
+                status: 'Active'
+            }
+        }
+        const headers = Headers.userHeader(adminToken)
+
+        const apiRequest = await apiContext.post(`${url}:3000/admin/profile/update`, { data, headers: headers })
+        expect(apiRequest.ok()).toBeTruthy()
+        console.log(`The User with Id: ${userId} is Active`)
+    }
+
     async adminSetPayoutEmail(url: string, adminToken: string, userId: string, payoutEmail: string) {
         const apiContext = await request.newContext({ ignoreHTTPSErrors: true })
         const data = {

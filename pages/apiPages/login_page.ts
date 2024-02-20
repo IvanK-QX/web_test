@@ -88,9 +88,10 @@ export class ApiLoginPage {
         const referalLink = response.profile.referalLink
         const abTests = response.profile.abTests
         const profile = response.profile
+        const diamonds = response.profile.diamonds
         expect(response.profile.status).toEqual('Active')
         console.log(`User email: ${email} has been added`)
-        return { userToken, email, id, createdUser, name, createdGuest, humanReadableId, country, referalLink, abTests, profile }
+        return { userToken, email, id, createdUser, name, createdGuest, humanReadableId, country, referalLink, abTests, profile, diamonds }
     }
 
     async createNewUser(url: string) {

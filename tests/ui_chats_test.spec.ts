@@ -1,63 +1,75 @@
+import { request, test } from '@playwright/test'
 import { apiUrl } from '../utils/apiUrl'
 import { apiDataSet } from '../utils/dataSet'
-import { streamerAndWatcherFixture } from '../fixtures/fixtures'
+import { App } from '../pages/App'
+import { Api } from '../pages/Api'
 
-let user, watcher_user
+let user, watcher
 
-streamerAndWatcherFixture.describe('UI - Chat Tests', async () => {
-    streamerAndWatcherFixture.beforeEach(async ({ streamer }) => {
-        user = await streamer.app.loginPage.apiLogin(apiUrl.qaEnvUrl)
-        await streamer.app.chatPage.open()
+test.describe('UI - Chat Tests', async () => {
+    test.beforeEach(async ({ page }) => {
+        const app = new App(page)
+        user = await app.loginPage.apiLogin(apiUrl.qaEnvUrl)
+        await app.chatPage.open()
     })
 
-    streamerAndWatcherFixture('Chats - Default System Messge', async ({ streamer }) => {
-        await streamer.app.chatPage.openExistingChat('Plamfy')
-        await streamer.app.chatPage.observeSupportMessageTextContent()
+    test('Chats - Default System Messge', async ({ page }) => {
+        const app = new App(page)
+        await app.chatPage.openExistingChat('Plamfy')
+        await app.chatPage.observeSupportMessageTextContent()
     })
 
-    streamerAndWatcherFixture('Chats - Unblock Chat', async ({ streamer }) => {
-        await streamer.app.chatPage.clickStartChatButton()
-        await streamer.app.chatPage.clickStartChatButtonWithFirstSuggestedUser()
-        await streamer.app.chatPage.observeBlockedChatForCoins()
-        await streamer.app.chatPage.unblockChat()
+    test('Chats - Unblock Chat', async ({ page }) => {
+        const app = new App(page)
+        await app.chatPage.clickStartChatButton()
+        await app.chatPage.clickStartChatButtonWithFirstSuggestedUser()
+        await app.chatPage.observeBlockedChatForCoins()
+        await app.chatPage.unblockChat()
     })
 })
 
-streamerAndWatcherFixture.describe('UI - Chat Page With Two Users', async () => {
-    streamerAndWatcherFixture.beforeEach(async ({ streamer, watcher }) => {
-        user = await streamer.app.loginPage.apiLogin(apiUrl.qaEnvUrl)
-
-        watcher_user = await watcher.api.loginPage.createNewUser(apiUrl.qaEnvUrl)
-        await streamer.api.followingPage.follow(apiUrl.qaEnvUrl, watcher_user.userToken, user.id)
-        await streamer.api.followingPage.follow(apiUrl.qaEnvUrl, user.userToken, watcher_user.id)
-        await streamer.app.chatPage.open()
-        await streamer.api.slackPage.addCoins(user.humanReadableId)
+test.describe('UI - Chat Page With Two Users', async () => {
+    test.beforeEach(async ({ page }) => {
+        const apiContext = await request.newContext()
+        const app = new App(page)
+        user = await app.loginPage.apiLogin(apiUrl.qaEnvUrl)
+        const api = new Api(apiContext)
+        watcher = await api.loginPage.createNewUser(apiUrl.qaEnvUrl)
+        await api.followingPage.follow(apiUrl.qaEnvUrl, watcher.userToken, user.id)
+        await api.followingPage.follow(apiUrl.qaEnvUrl, user.userToken, watcher.id)
+        await app.chatPage.open()
+        await api.slackPage.addCoins(user.humanReadableId)
     })
 
-    streamerAndWatcherFixture('Chats - Unblock Chat By Followings', async ({ streamer }) => {
-        await streamer.app.chatPage.startChetWithSpecificUser(watcher_user.name)
-        await streamer.app.chatPage.observeUnblockedChat()
+    test('Chats - Unblock Chat By Followings', async ({ page }) => {
+        const app = new App(page)
+        await app.chatPage.startChetWithSpecificUser(watcher.name)
+        await app.chatPage.observeUnblockedChat()
     })
 
-    streamerAndWatcherFixture('Chats - Message Validation', async ({ streamer }) => {
-        await streamer.app.chatPage.startChetWithSpecificUser(watcher_user.name)
-        await streamer.app.chatPage.sendMessage(apiDataSet.validationMessageText)
-        await streamer.app.chatPage.sendMessage(apiDataSet.message254Symbols)
-        await streamer.app.chatPage.sendMessage255Symbols()
+    test('Chats - Message Validation', async ({ page }) => {
+        const app = new App(page)
+        await app.chatPage.startChetWithSpecificUser(watcher.name)
+        await app.chatPage.sendMessage(apiDataSet.validationMessageText)
+        await app.chatPage.sendMessage(apiDataSet.message254Symbols)
+        await app.chatPage.sendMessage255Symbols()
     })
 
-    streamerAndWatcherFixture('Chats - Send Media File', async ({ streamer }) => {
-        await streamer.app.chatPage.startChetWithSpecificUser(watcher_user.name)
-        await streamer.app.chatPage.sendMediaFile()
+    test('Chats - Send Media File', async ({ page }) => {
+        const app = new App(page)
+        await app.chatPage.startChetWithSpecificUser(watcher.name)
+        await app.chatPage.sendMediaFile()
     })
 
-    streamerAndWatcherFixture('Chats - Send Emoji', async ({ streamer }) => {
-        await streamer.app.chatPage.startChetWithSpecificUser(watcher_user.name)
-        await streamer.app.chatPage.sendEmoji()
+    test('Chats - Send Emoji', async ({ page }) => {
+        const app = new App(page)
+        await app.chatPage.startChetWithSpecificUser(watcher.name)
+        await app.chatPage.sendEmoji()
     })
 
-    streamerAndWatcherFixture('Chats - Send Gift In Chat', async ({ streamer }) => {
-        await streamer.app.chatPage.startChetWithSpecificUser(watcher_user.name)
-        await streamer.app.chatPage.sendGift()
+    test('Chats - Send Gift In Chat', async ({ page }) => {
+        const app = new App(page)
+        await app.chatPage.startChetWithSpecificUser(watcher.name)
+        await app.chatPage.sendGift()
     })
 })

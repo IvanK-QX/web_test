@@ -30,7 +30,7 @@ export class AppPreStreamPage {
         this.snackBarCloseBtn = page.locator('button.stream-snackbar__close')
     }
 
-    async changeStreamTitle(name = 'lets go') {
+    async changeStreamTitle(name) {
         await this.streamTitleField.fill(name)
     }
 

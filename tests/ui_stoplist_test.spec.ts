@@ -17,8 +17,7 @@ test.describe('UI - Profile Tests', async () => {
         await app.ediProfilePage.setInappropriateName('penis')
     })
 
-    //stoplist bug 
-    test.skip('Stoplist - Forbidden Words in Chat', async ({page}) => {
+    test('Stoplist - Forbidden Words in Chat', async ({page}) => {
         const app = new App(page)
         const apiContext = await request.newContext()
         const api = new Api(apiContext)
