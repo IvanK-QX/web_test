@@ -1,31 +1,26 @@
-import { test } from '@playwright/test'
 import { apiUrl } from '../utils/apiUrl'
-import { App } from '../pages/App'
+import { streamerAndWatcherFixture } from '../fixtures/fixtures'
 
-test.describe('UI - Search Tests', async () => {
-    test.beforeEach(async ({ page }) => {
-        const app = new App(page)
-        await app.loginPage.apiLogin(apiUrl.qaEnvUrl)
-        await page.goto('/')
+streamerAndWatcherFixture.describe('UI - Search Tests', async () => {
+    streamerAndWatcherFixture.beforeEach(async ({ streamer }) => {
+        await streamer.app.loginPage.apiLogin(apiUrl.qaEnvUrl)
+        await streamer.page.goto('/')
     })
 
-    test('Chats - Search by name ', async ({ page }) => {
-        const app = new App(page)
-        await app.mainPage.searchUserByName('50cent')
-        await app.mainPage.validateCorrectSearch('50cent')
+    streamerAndWatcherFixture('Chats - Search by name ', async ({ streamer }) => {
+        await streamer.app.mainPage.searchUserByName('50cent')
+        await streamer.app.mainPage.validateCorrectSearch('50cent')
     })
 
-    test('Chats - Unblock Chat', async ({ page }) => {
-        const app = new App(page)
-        await app.mainPage.searchUserByName('7879')
-        await app.mainPage.validateCorrectSearch('50cent')
+    streamerAndWatcherFixture('Chats - Unblock Chat', async ({ streamer }) => {
+        await streamer.app.mainPage.searchUserByName('7879')
+        await streamer.app.mainPage.validateCorrectSearch('50cent')
     })
 
-    test('Chats - Send Gift From Profile ', async ({ page }) => {
-        const app = new App(page)
-        await app.mainPage.searchUserByName('7879')
-        await app.mainPage.validateCorrectSearch('50cent')
-        await app.mainPage.clickonUserProfile()
-        await app.mainPage.sendGiftFromProfile()
+    streamerAndWatcherFixture('Chats - Send Gift From Profile ', async ({ streamer }) => {
+        await streamer.app.mainPage.searchUserByName('7879')
+        await streamer.app.mainPage.validateCorrectSearch('50cent')
+        await streamer.app.mainPage.clickonUserProfile()
+        await streamer.app.mainPage.sendGiftFromProfile()
     })
 })
