@@ -24,7 +24,7 @@ export const apiDataSet = {
 }
 
 export const texts = {
-    streamTitleInappropriateError: 'Your title includes inappropriate expression. Please, add another title',
+    streamTitleInappropriateError: 'Your title includes inappropriate expression. Please, add another title.',
     unblockChatText: '45 coin/message',
     plamfySupportText: 'Plamfy Support',
     blockUserConfirmationText: 'Are you sure you want to block this user?',

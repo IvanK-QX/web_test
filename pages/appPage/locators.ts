@@ -17,6 +17,7 @@ export const locators = {
         mediaMessage: 'div.chat-private-message-file__content',
         emojiBtn: 'button.chat-input-area__button-emoji-picker',
     },
+    
     mainPage: {
         profileBtn: '[class="user-dropdown__name"]',
         redeemCashBtn: '[href="/redeem-cash"]'

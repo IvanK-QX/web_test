@@ -33,7 +33,7 @@ export class AppChatPage {
         this.chatValidationErrorLocator = page.locator('p.chat-input-area__error')
         this.contextMenuLocator = page.locator('div.context-menu')
         this.blockUserBtnLocator = page.locator('//span[contains(text(),"Block User")]/..')
-        this.confirmModalLocator = page.locator('//span[text()="Block"]/..')
+        this.confirmModalLocator = page.locator('button.confirm-modal__buttons--first')
         this.contactSupportBtnLocator = page.locator('[rel="noreferrer noopener"]')
         this.messageTimeIconLocator = page.locator('span.message-time')
         this.translateIconLocator = page.locator('svg.message__translate-icon')

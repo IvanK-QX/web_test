@@ -1,31 +1,36 @@
+import { test } from '@playwright/test'
 import { apiUrl } from '../utils/apiUrl'
-import { streamerAndWatcherFixture } from '../fixtures/fixtures'
+import { App } from '../pages/App'
 
 
-streamerAndWatcherFixture.describe('UI Stream Tests With Two Users', async () => {
-    streamerAndWatcherFixture.beforeEach(async ({ streamer }) => {
-        await streamer.app.loginPage.apiLogin(apiUrl.qaEnvUrl)
+test.describe('UI Stream Tests With Two Users', async () => {
+    test.beforeEach(async ({ page }) => {
+        const app = new App(page)
+        await app.loginPage.apiLogin(apiUrl.qaEnvUrl)
 
     })
 
-    streamerAndWatcherFixture('All Prestream Elements Loaded ', async ({ streamer }) => {
-        await streamer.app.ediProfilePage.open()
-        await streamer.app.sidePanelPage.clickCreateStreamBtn()
-        await streamer.app.preStreamPage.observeCameraDropdown()
-        await streamer.app.preStreamPage.observeMicrophoneDropdown()
-        await streamer.app.preStreamPage.observeStreamTitle()
-        await streamer.app.preStreamPage.observePreStreamAttributes()
+    test('All Prestream Elements Loaded ', async ({ page }) => {
+        const app = new App(page)
+        await app.ediProfilePage.open()
+        await app.sidePanelPage.clickCreateStreamBtn()
+        await app.preStreamPage.observeCameraDropdown()
+        await app.preStreamPage.observeMicrophoneDropdown()
+        await app.preStreamPage.observeStreamTitle()
+        await app.preStreamPage.observePreStreamAttributes()
     })
 
-    streamerAndWatcherFixture('Pre Stream - Disable Camera', async ({ streamer }) => {
-        await streamer.app.ediProfilePage.open()
-        await streamer.app.sidePanelPage.clickCreateStreamBtn()
-        await streamer.app.preStreamPage.disableCamera()
+    test('Pre Stream - Disable Camera', async ({ page }) => {
+        const app = new App(page)
+        await app.ediProfilePage.open()
+        await app.sidePanelPage.clickCreateStreamBtn()
+        await app.preStreamPage.disableCamera()
     })
 
-    streamerAndWatcherFixture('Pre Stream - Close Pre Stream', async ({ streamer }) => {
-        await streamer.app.ediProfilePage.open()
-        await streamer.app.sidePanelPage.clickCreateStreamBtn()
-        await streamer.app.preStreamPage.closeStreamSnackbar()
+    test('Pre Stream - Close Pre Stream', async ({ page }) => {
+        const app = new App(page)
+        await app.ediProfilePage.open()
+        await app.sidePanelPage.clickCreateStreamBtn()
+        await app.preStreamPage.closeStreamSnackbar()
     })
 })
