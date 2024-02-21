@@ -27,7 +27,8 @@ export class AppLoginPage {
         const id = user.id
         const name = user.name
         const humanReadableId = user.humanReadableId
+        const email = user.email
         await api.slackPage.addCoins(humanReadableId)
-        return { userToken, id, name, humanReadableId }
+        return { userToken, id, name, humanReadableId, email }
     }
 }

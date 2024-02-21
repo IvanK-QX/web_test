@@ -1,5 +1,6 @@
 import { Locator, Page } from '@playwright/test'
 import { apiUrl } from '../../utils/apiUrl'
+import { locators } from './locators'
 
 export class AppMainPage {
     page: Page
@@ -54,4 +55,10 @@ export class AppMainPage {
         await this.page.locator('[src="https://media.streamsqa.com/follow_v1.png"]').click()
         await this.giftSentBanner.waitFor()
     }
+
+    async clickProfileBtn() {
+        await this.page.locator(locators.mainPage.profileBtn).click()
+    }
+
+
 }
