@@ -1,0 +1,1141 @@
+{
+  "uid" : "d7cca2c119a549ce",
+  "name" : "Stoplist - Stream Chat",
+  "fullName" : "ui_stoplist_test.spec.ts#UI - Profile Tests Stoplist - Stream Chat",
+  "historyId" : "ed66e5bc1687d7ec3046bb8de1973372:5bd835b0d6b1d4ada3b9f0db936e82c8",
+  "time" : {
+    "start" : 1708652842213,
+    "stop" : 1708652883258,
+    "duration" : 41045
+  },
+  "status" : "failed",
+  "statusMessage" : "TimeoutError: locator.waitFor: Timeout 20000ms exceeded.\nCall log:\n  - waiting for locator('//span[contains(text(),\\'Pause\\')]') to be visible\n",
+  "statusTrace" : "TimeoutError: locator.waitFor: Timeout 20000ms exceeded.\nCall log:\n  - waiting for locator('//span[contains(text(),\\'Pause\\')]') to be visible\n\n    at AppPreStreamPage.observeStream (/home/runner/work/web_test/web_test/pages/appPage/preStream_page.ts:54:35)\n    at /home/runner/work/web_test/web_test/tests/ui_stoplist_test.spec.ts:40:9",
+  "flaky" : true,
+  "newFailed" : true,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "failed",
+    "statusMessage" : "TimeoutError: locator.waitFor: Timeout 20000ms exceeded.\nCall log:\n  - waiting for locator('//span[contains(text(),\\'Pause\\')]') to be visible\n",
+    "statusTrace" : "TimeoutError: locator.waitFor: Timeout 20000ms exceeded.\nCall log:\n  - waiting for locator('//span[contains(text(),\\'Pause\\')]') to be visible\n\n    at AppPreStreamPage.observeStream (/home/runner/work/web_test/web_test/pages/appPage/preStream_page.ts:54:35)\n    at /home/runner/work/web_test/web_test/tests/ui_stoplist_test.spec.ts:40:9",
+    "steps" : [ {
+      "name" : "Before Hooks",
+      "time" : {
+        "start" : 1708652842216,
+        "stop" : 1708652856545,
+        "duration" : 14329
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "beforeEach hook",
+        "time" : {
+          "start" : 1708652842218,
+          "stop" : 1708652856544,
+          "duration" : 14326
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "fixture: browser",
+          "time" : {
+            "start" : 1708652842231,
+            "stop" : 1708652842372,
+            "duration" : 141
+          },
+          "status" : "passed",
+          "steps" : [ {
+            "name" : "browserType.launch",
+            "time" : {
+              "start" : 1708652842233,
+              "stop" : 1708652842372,
+              "duration" : 139
+            },
+            "status" : "passed",
+            "steps" : [ ],
+            "attachments" : [ ],
+            "parameters" : [ ],
+            "stepsCount" : 0,
+            "attachmentsCount" : 0,
+            "shouldDisplayMessage" : false,
+            "hasContent" : false
+          } ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 1,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        }, {
+          "name" : "fixture: context",
+          "time" : {
+            "start" : 1708652842375,
+            "stop" : 1708652842394,
+            "duration" : 19
+          },
+          "status" : "passed",
+          "steps" : [ {
+            "name" : "browser.newContext",
+            "time" : {
+              "start" : 1708652842378,
+              "stop" : 1708652842388,
+              "duration" : 10
+            },
+            "status" : "passed",
+            "steps" : [ ],
+            "attachments" : [ ],
+            "parameters" : [ ],
+            "stepsCount" : 0,
+            "attachmentsCount" : 0,
+            "shouldDisplayMessage" : false,
+            "hasContent" : false
+          } ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 1,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        }, {
+          "name" : "fixture: page",
+          "time" : {
+            "start" : 1708652842395,
+            "stop" : 1708652842433,
+            "duration" : 38
+          },
+          "status" : "passed",
+          "steps" : [ {
+            "name" : "browserContext.newPage",
+            "time" : {
+              "start" : 1708652842398,
+              "stop" : 1708652842433,
+              "duration" : 35
+            },
+            "status" : "passed",
+            "steps" : [ ],
+            "attachments" : [ ],
+            "parameters" : [ ],
+            "stepsCount" : 0,
+            "attachmentsCount" : 0,
+            "shouldDisplayMessage" : false,
+            "hasContent" : false
+          } ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 1,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        }, {
+          "name" : "fixture: streamer",
+          "time" : {
+            "start" : 1708652842434,
+            "stop" : 1708652842450,
+            "duration" : 16
+          },
+          "status" : "passed",
+          "steps" : [ {
+            "name" : "apiRequest.newContext",
+            "time" : {
+              "start" : 1708652842436,
+              "stop" : 1708652842446,
+              "duration" : 10
+            },
+            "status" : "passed",
+            "steps" : [ ],
+            "attachments" : [ ],
+            "parameters" : [ ],
+            "stepsCount" : 0,
+            "attachmentsCount" : 0,
+            "shouldDisplayMessage" : false,
+            "hasContent" : false
+          } ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 1,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        }, {
+          "name" : "apiRequest.newContext",
+          "time" : {
+            "start" : 1708652842452,
+            "stop" : 1708652842453,
+            "duration" : 1
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        }, {
+          "name" : "apiRequest.newContext",
+          "time" : {
+            "start" : 1708652842465,
+            "stop" : 1708652842467,
+            "duration" : 2
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        }, {
+          "name" : "apiRequestContext.post(https://streamsqa.com:3000/login)",
+          "time" : {
+            "start" : 1708652842473,
+            "stop" : 1708652843135,
+            "duration" : 662
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        }, {
+          "name" : "apiResponse.json",
+          "time" : {
+            "start" : 1708652843136,
+            "stop" : 1708652843138,
+            "duration" : 2
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        }, {
+          "name" : "expect.toBeTruthy",
+          "time" : {
+            "start" : 1708652843140,
+            "stop" : 1708652843140,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        }, {
+          "name" : "expect.toEqual",
+          "time" : {
+            "start" : 1708652843141,
+            "stop" : 1708652843141,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        }, {
+          "name" : "apiRequest.newContext",
+          "time" : {
+            "start" : 1708652843143,
+            "stop" : 1708652843144,
+            "duration" : 1
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        }, {
+          "name" : "apiRequestContext.post(https://streamsqa.com:3000/login)",
+          "time" : {
+            "start" : 1708652843149,
+            "stop" : 1708652846756,
+            "duration" : 3607
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        }, {
+          "name" : "apiResponse.json",
+          "time" : {
+            "start" : 1708652846757,
+            "stop" : 1708652846759,
+            "duration" : 2
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        }, {
+          "name" : "expect.toBeTruthy",
+          "time" : {
+            "start" : 1708652846760,
+            "stop" : 1708652846760,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        }, {
+          "name" : "expect.toEqual",
+          "time" : {
+            "start" : 1708652846761,
+            "stop" : 1708652846761,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        }, {
+          "name" : "page.goto(https://webclient.streamsqa.com)",
+          "time" : {
+            "start" : 1708652846763,
+            "stop" : 1708652849732,
+            "duration" : 2969
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        }, {
+          "name" : "page.evaluate",
+          "time" : {
+            "start" : 1708652849734,
+            "stop" : 1708652849843,
+            "duration" : 109
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        }, {
+          "name" : "page.evaluate",
+          "time" : {
+            "start" : 1708652849845,
+            "stop" : 1708652849874,
+            "duration" : 29
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        }, {
+          "name" : "page.evaluate",
+          "time" : {
+            "start" : 1708652849876,
+            "stop" : 1708652849887,
+            "duration" : 11
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        }, {
+          "name" : "page.evaluate",
+          "time" : {
+            "start" : 1708652849888,
+            "stop" : 1708652849904,
+            "duration" : 16
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        }, {
+          "name" : "page.evaluate",
+          "time" : {
+            "start" : 1708652849905,
+            "stop" : 1708652849917,
+            "duration" : 12
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        }, {
+          "name" : "page.goto(/edit)",
+          "time" : {
+            "start" : 1708652849918,
+            "stop" : 1708652852523,
+            "duration" : 2605
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        }, {
+          "name" : "apiRequest.newContext",
+          "time" : {
+            "start" : 1708652852525,
+            "stop" : 1708652852531,
+            "duration" : 6
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        }, {
+          "name" : "apiRequestContext.post(https://web4space.slack.com/api/chat.command)",
+          "time" : {
+            "start" : 1708652852542,
+            "stop" : 1708652853404,
+            "duration" : 862
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        }, {
+          "name" : "expect.toBeTruthy",
+          "time" : {
+            "start" : 1708652853406,
+            "stop" : 1708652853406,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        }, {
+          "name" : "apiResponse.json",
+          "time" : {
+            "start" : 1708652853407,
+            "stop" : 1708652853408,
+            "duration" : 1
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        }, {
+          "name" : "expect.toBeTruthy",
+          "time" : {
+            "start" : 1708652853408,
+            "stop" : 1708652853408,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        }, {
+          "name" : "page.goto(https://webclient.streamsqa.com/profile)",
+          "time" : {
+            "start" : 1708652853410,
+            "stop" : 1708652855579,
+            "duration" : 2169
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        }, {
+          "name" : "page.waitForLoadState",
+          "time" : {
+            "start" : 1708652855581,
+            "stop" : 1708652856544,
+            "duration" : 963
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 33,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 34,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "locator.click(.sidebar__create-button)",
+      "time" : {
+        "start" : 1708652856546,
+        "stop" : 1708652856677,
+        "duration" : 131
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "locator.waitFor([placeholder=\"Stream title\"])",
+      "time" : {
+        "start" : 1708652856679,
+        "stop" : 1708652857235,
+        "duration" : 556
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "locator.click(.stream-main-action__button--public button)",
+      "time" : {
+        "start" : 1708652857238,
+        "stop" : 1708652857588,
+        "duration" : 350
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "locator.click(button.user-data-entris__button-upload)",
+      "time" : {
+        "start" : 1708652857591,
+        "stop" : 1708652857905,
+        "duration" : 314
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "fileChooser.setFiles",
+        "time" : {
+          "start" : 1708652857900,
+          "stop" : 1708652857925,
+          "duration" : 25
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "page.waitForTimeout",
+          "time" : {
+            "start" : 1708652857907,
+            "stop" : 1708652858932,
+            "duration" : 1025
+          },
+          "status" : "passed",
+          "steps" : [ {
+            "name" : "fileChooser.setFiles",
+            "time" : {
+              "start" : 1708652857926,
+              "stop" : 1708652857958,
+              "duration" : 32
+            },
+            "status" : "passed",
+            "steps" : [ ],
+            "attachments" : [ ],
+            "parameters" : [ ],
+            "stepsCount" : 0,
+            "attachmentsCount" : 0,
+            "shouldDisplayMessage" : false,
+            "hasContent" : false
+          } ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 1,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 3,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "locator.getByText(' Save ').click",
+      "time" : {
+        "start" : 1708652858933,
+        "stop" : 1708652859011,
+        "duration" : 78
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "page.waitForTimeout",
+      "time" : {
+        "start" : 1708652859012,
+        "stop" : 1708652861028,
+        "duration" : 2016
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "page.waitForLoadState",
+      "time" : {
+        "start" : 1708652861030,
+        "stop" : 1708652861031,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "locator.click(.stream-main-action__button--public button)",
+      "time" : {
+        "start" : 1708652861032,
+        "stop" : 1708652861157,
+        "duration" : 125
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "locator.waitFor(div.create-stream__actions)",
+      "time" : {
+        "start" : 1708652861157,
+        "stop" : 1708652861190,
+        "duration" : 33
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "locator.waitFor(//span[contains(text(),'Pause')])",
+      "time" : {
+        "start" : 1708652861191,
+        "stop" : 1708652881215,
+        "duration" : 20024
+      },
+      "status" : "failed",
+      "statusMessage" : "TimeoutError: locator.waitFor: Timeout 20000ms exceeded.\nCall log:\n  - waiting for locator('//span[contains(text(),\\'Pause\\')]') to be visible\n",
+      "statusTrace" : "TimeoutError: locator.waitFor: Timeout 20000ms exceeded.\nCall log:\n  - waiting for locator('//span[contains(text(),\\'Pause\\')]') to be visible\n\n    at AppPreStreamPage.observeStream (/home/runner/work/web_test/web_test/pages/appPage/preStream_page.ts:54:35)\n    at /home/runner/work/web_test/web_test/tests/ui_stoplist_test.spec.ts:40:9",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true
+    }, {
+      "name" : "After Hooks",
+      "time" : {
+        "start" : 1708652881216,
+        "stop" : 1708652883236,
+        "duration" : 2020
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "page.screenshot",
+        "time" : {
+          "start" : 1708652881219,
+          "stop" : 1708652881366,
+          "duration" : 147
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      }, {
+        "name" : "fixture: streamer",
+        "time" : {
+          "start" : 1708652881368,
+          "stop" : 1708652881368,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      }, {
+        "name" : "fixture: page",
+        "time" : {
+          "start" : 1708652881369,
+          "stop" : 1708652881369,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      }, {
+        "name" : "fixture: context",
+        "time" : {
+          "start" : 1708652881369,
+          "stop" : 1708652881369,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      }, {
+        "name" : "video.saveAs",
+        "time" : {
+          "start" : 1708652882265,
+          "stop" : 1708652882267,
+          "duration" : 2
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      }, {
+        "name" : "fixture: browser",
+        "time" : {
+          "start" : 1708652883184,
+          "stop" : 1708652883236,
+          "duration" : 52
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 6,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ {
+      "uid" : "ed077edef8183936",
+      "name" : "screenshot",
+      "source" : "ed077edef8183936.png",
+      "type" : "image/png",
+      "size" : 95704
+    }, {
+      "uid" : "71f14bc7f7ace5ba",
+      "name" : "video",
+      "source" : "71f14bc7f7ace5ba.webm",
+      "type" : "video/webm",
+      "size" : 886125
+    }, {
+      "uid" : "bbc9a03145cbf60d",
+      "name" : "trace",
+      "source" : "bbc9a03145cbf60d.zip",
+      "type" : "application/zip",
+      "size" : 13894947
+    }, {
+      "uid" : "2673f1cee286eea2",
+      "name" : "stdout",
+      "source" : "2673f1cee286eea2.txt",
+      "type" : "text/plain",
+      "size" : 132
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 55,
+    "attachmentsCount" : 4,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "language",
+    "value" : "JavaScript"
+  }, {
+    "name" : "framework",
+    "value" : "Playwright"
+  }, {
+    "name" : "titlePath",
+    "value" : " > chromium > ui_stoplist_test.spec.ts > UI - Profile Tests"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1530-869"
+  }, {
+    "name" : "thread",
+    "value" : "fv-az1530-869-2405-playwright-worker-0"
+  }, {
+    "name" : "parentSuite",
+    "value" : "chromium"
+  }, {
+    "name" : "suite",
+    "value" : "ui_stoplist_test.spec.ts"
+  }, {
+    "name" : "subSuite",
+    "value" : "UI - Profile Tests"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "Project",
+    "value" : "chromium"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "3c2c891d9d2815f",
+      "status" : "failed",
+      "statusDetails" : "TimeoutError: locator.waitFor: Timeout 20000ms exceeded.\nCall log:\n  - waiting for locator('//span[contains(text(),\\'Pause\\')]') to be visible\n",
+      "time" : {
+        "start" : 1708652799999,
+        "stop" : 1708652840925,
+        "duration" : 40926
+      }
+    }, {
+      "uid" : "d47c2977f07c22a6",
+      "status" : "broken",
+      "statusDetails" : "Test timeout of 180000ms exceeded.",
+      "time" : {
+        "start" : 1708652615070,
+        "stop" : 1708652799992,
+        "duration" : 184922
+      }
+    } ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 9,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 160,
+        "unknown" : 0,
+        "total" : 169
+      },
+      "items" : [ {
+        "uid" : "98fcb09ef55e8666",
+        "reportUrl" : "https://IvanK-QX.github.io/web_test/295//#testresult/98fcb09ef55e8666",
+        "status" : "passed",
+        "time" : {
+          "start" : 1708611816299,
+          "stop" : 1708611833569,
+          "duration" : 17270
+        }
+      }, {
+        "uid" : "bca9d46af7c7c8eb",
+        "reportUrl" : "https://IvanK-QX.github.io/web_test/294//#testresult/bca9d46af7c7c8eb",
+        "status" : "passed",
+        "time" : {
+          "start" : 1708566197971,
+          "stop" : 1708566229432,
+          "duration" : 31461
+        }
+      }, {
+        "uid" : "2abbcca6fbca7d6f",
+        "reportUrl" : "https://IvanK-QX.github.io/web_test/293//#testresult/2abbcca6fbca7d6f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1708525094107,
+          "stop" : 1708525132305,
+          "duration" : 38198
+        }
+      }, {
+        "uid" : "b1ef9009b03e93e7",
+        "reportUrl" : "https://IvanK-QX.github.io/web_test/292//#testresult/b1ef9009b03e93e7",
+        "status" : "passed",
+        "time" : {
+          "start" : 1708524777366,
+          "stop" : 1708524809635,
+          "duration" : 32269
+        }
+      }, {
+        "uid" : "110aeb040d4bffa",
+        "reportUrl" : "https://IvanK-QX.github.io/web_test/291//#testresult/110aeb040d4bffa",
+        "status" : "passed",
+        "time" : {
+          "start" : 1708479904424,
+          "stop" : 1708479939413,
+          "duration" : 34989
+        }
+      }, {
+        "uid" : "771e5dbbc85a670d",
+        "reportUrl" : "https://IvanK-QX.github.io/web_test/290//#testresult/771e5dbbc85a670d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1708443010515,
+          "stop" : 1708443054391,
+          "duration" : 43876
+        }
+      }, {
+        "uid" : "88ddba67565d7940",
+        "reportUrl" : "https://IvanK-QX.github.io/web_test/289//#testresult/88ddba67565d7940",
+        "status" : "passed",
+        "time" : {
+          "start" : 1708438696054,
+          "stop" : 1708438722145,
+          "duration" : 26091
+        }
+      }, {
+        "uid" : "81e770f72c5168f2",
+        "reportUrl" : "https://IvanK-QX.github.io/web_test/288//#testresult/81e770f72c5168f2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1708423433473,
+          "stop" : 1708423473999,
+          "duration" : 40526
+        }
+      }, {
+        "uid" : "4e0e06854ca4e607",
+        "reportUrl" : "https://IvanK-QX.github.io/web_test/287//#testresult/4e0e06854ca4e607",
+        "status" : "failed",
+        "statusDetails" : "Error: browserType.launch: Target page, context or browser has been closed\nBrowser logs:\n\n╔════════════════════════════════════════════════════════════════════════════════════════════════╗\n║ Looks like you launched a headed browser without having a XServer running.                     ║\n║ Set either 'headless: true' or use 'xvfb-run <your-playwright-app>' before running Playwright. ║\n║                                                                                                ║\n║ <3 Playwright Team                                                                             ║\n╚════════════════════════════════════════════════════════════════════════════════════════════════╝\nCall log:\n  - <launching> /home/runner/.cache/ms-playwright/chromium-1097/chrome-linux/chrome --disable-field-trial-config --disable-background-networking --enable-features=NetworkService,NetworkServiceInProcess --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades,PaintHolding --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --no-sandbox --use-fake-ui-for-media-stream --use-fake-device-for-media-stream --user-data-dir=/tmp/playwright_chromiumdev_profile-6NtVvf --remote-debugging-pipe --no-startup-window\n  - <launched> pid=12812\n  - [pid=12812][err] [12812:12812:0220/090021.007983:ERROR:ozone_platform_x11.cc(239)] Missing X server or $DISPLAY\n  - [pid=12812][err] [12812:12812:0220/090021.008016:ERROR:env.cc(257)] The platform failed to initialize.  Exiting.\n",
+        "time" : {
+          "start" : 1708419620798,
+          "stop" : 1708419621039,
+          "duration" : 241
+        }
+      }, {
+        "uid" : "c8e1ab807311beaa",
+        "reportUrl" : "https://IvanK-QX.github.io/web_test/286//#testresult/c8e1ab807311beaa",
+        "status" : "passed",
+        "time" : {
+          "start" : 1708413640430,
+          "stop" : 1708413693776,
+          "duration" : 53346
+        }
+      }, {
+        "uid" : "f20b8b829c1cc47a",
+        "reportUrl" : "https://IvanK-QX.github.io/web_test/285//#testresult/f20b8b829c1cc47a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1708393412117,
+          "stop" : 1708393452801,
+          "duration" : 40684
+        }
+      }, {
+        "uid" : "4ed4a58102819f3b",
+        "reportUrl" : "https://IvanK-QX.github.io/web_test/284//#testresult/4ed4a58102819f3b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1708352388695,
+          "stop" : 1708352429707,
+          "duration" : 41012
+        }
+      }, {
+        "uid" : "fcfeeb5da951e806",
+        "reportUrl" : "https://IvanK-QX.github.io/web_test/283//#testresult/fcfeeb5da951e806",
+        "status" : "failed",
+        "statusDetails" : "Error: page.evaluate: DOMException: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.\n    at eval (eval at evaluate (:226:30), <anonymous>:1:8)\n    at eval (<anonymous>)\n    at UtilityScript.evaluate (<anonymous>:226:30)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+        "time" : {
+          "start" : 1708351334555,
+          "stop" : 1708351336915,
+          "duration" : 2360
+        }
+      }, {
+        "uid" : "4a8f6974c7fec0a6",
+        "reportUrl" : "https://IvanK-QX.github.io/web_test/282//#testresult/4a8f6974c7fec0a6",
+        "status" : "failed",
+        "statusDetails" : "Error: browserType.launch: Target page, context or browser has been closed\nBrowser logs:\n\n╔════════════════════════════════════════════════════════════════════════════════════════════════╗\n║ Looks like you launched a headed browser without having a XServer running.                     ║\n║ Set either 'headless: true' or use 'xvfb-run <your-playwright-app>' before running Playwright. ║\n║                                                                                                ║\n║ <3 Playwright Team                                                                             ║\n╚════════════════════════════════════════════════════════════════════════════════════════════════╝\nCall log:\n  - <launching> /home/runner/.cache/ms-playwright/chromium-1091/chrome-linux/chrome --disable-field-trial-config --disable-background-networking --enable-features=NetworkService,NetworkServiceInProcess --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --no-sandbox --use-fake-ui-for-media-stream --use-fake-device-for-media-stream --user-data-dir=/tmp/playwright_chromiumdev_profile-eetAR0 --remote-debugging-pipe --no-startup-window\n  - <launched> pid=12663\n  - [pid=12663][err] [12663:12663:0219/140103.632447:ERROR:ozone_platform_x11.cc(239)] Missing X server or $DISPLAY\n  - [pid=12663][err] [12663:12663:0219/140103.632499:ERROR:env.cc(257)] The platform failed to initialize.  Exiting.\n",
+        "time" : {
+          "start" : 1708351263387,
+          "stop" : 1708351263661,
+          "duration" : 274
+        }
+      }, {
+        "uid" : "cd01dd5ae283d68a",
+        "reportUrl" : "https://IvanK-QX.github.io/web_test/281//#testresult/cd01dd5ae283d68a",
+        "status" : "failed",
+        "statusDetails" : "Error: browserType.launch: Target page, context or browser has been closed\nBrowser logs:\n\n╔════════════════════════════════════════════════════════════════════════════════════════════════╗\n║ Looks like you launched a headed browser without having a XServer running.                     ║\n║ Set either 'headless: true' or use 'xvfb-run <your-playwright-app>' before running Playwright. ║\n║                                                                                                ║\n║ <3 Playwright Team                                                                             ║\n╚════════════════════════════════════════════════════════════════════════════════════════════════╝\nCall log:\n  - <launching> /home/runner/.cache/ms-playwright/chromium-1091/chrome-linux/chrome --disable-field-trial-config --disable-background-networking --enable-features=NetworkService,NetworkServiceInProcess --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --no-sandbox --use-fake-ui-for-media-stream --use-fake-device-for-media-stream --user-data-dir=/tmp/playwright_chromiumdev_profile-Ig00zN --remote-debugging-pipe --no-startup-window\n  - <launched> pid=12811\n  - [pid=12811][err] [12811:12811:0219/134702.660022:ERROR:ozone_platform_x11.cc(239)] Missing X server or $DISPLAY\n  - [pid=12811][err] [12811:12811:0219/134702.660065:ERROR:env.cc(257)] The platform failed to initialize.  Exiting.\n",
+        "time" : {
+          "start" : 1708350422397,
+          "stop" : 1708350422691,
+          "duration" : 294
+        }
+      }, {
+        "uid" : "ddaa70f6c0f599a9",
+        "reportUrl" : "https://IvanK-QX.github.io/web_test/280//#testresult/ddaa70f6c0f599a9",
+        "status" : "passed",
+        "time" : {
+          "start" : 1708343330725,
+          "stop" : 1708343386513,
+          "duration" : 55788
+        }
+      }, {
+        "uid" : "6bd86e673965c7f4",
+        "reportUrl" : "https://IvanK-QX.github.io/web_test/279//#testresult/6bd86e673965c7f4",
+        "status" : "passed",
+        "time" : {
+          "start" : 1708331654200,
+          "stop" : 1708331709110,
+          "duration" : 54910
+        }
+      }, {
+        "uid" : "b281d7be85a17071",
+        "reportUrl" : "https://IvanK-QX.github.io/web_test/278//#testresult/b281d7be85a17071",
+        "status" : "passed",
+        "time" : {
+          "start" : 1708307231073,
+          "stop" : 1708307286271,
+          "duration" : 55198
+        }
+      }, {
+        "uid" : "9a4518132ea527ee",
+        "reportUrl" : "https://IvanK-QX.github.io/web_test/277//#testresult/9a4518132ea527ee",
+        "status" : "passed",
+        "time" : {
+          "start" : 1708265915625,
+          "stop" : 1708265955662,
+          "duration" : 40037
+        }
+      }, {
+        "uid" : "a32d543d89d781b9",
+        "reportUrl" : "https://IvanK-QX.github.io/web_test/276//#testresult/a32d543d89d781b9",
+        "status" : "passed",
+        "time" : {
+          "start" : 1708221153974,
+          "stop" : 1708221178324,
+          "duration" : 24350
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "d7cca2c119a549ce.json",
+  "parameterValues" : [ "chromium" ]
+}

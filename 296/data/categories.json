@@ -1,0 +1,56 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "Error: apiRequestContext.post: Request timed out after 20000ms\nCall log:\n  - → POST https://streamsqa.com:3000/login\n  -   user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.6167.57 Safari/537.36\n  -   accept: */*\n  -   accept-encoding: gzip,deflate,br\n  -   packagename: com.plamfy\n  -   content-type: application/json\n  -   appversion: 1\n  -   os: ios\n  -   content-length: 96\n",
+      "children" : [ {
+        "name" : "Chats - Message Validation",
+        "uid" : "b0e455d9b642af6c",
+        "parentUid" : "361d70b11626530819fe00c0798b7daa",
+        "status" : "failed",
+        "time" : {
+          "start" : 1708652693238,
+          "stop" : 1708652716114,
+          "duration" : 22876
+        },
+        "flaky" : true,
+        "newFailed" : true,
+        "parameters" : [ "chromium" ]
+      } ],
+      "uid" : "361d70b11626530819fe00c0798b7daa"
+    }, {
+      "name" : "TimeoutError: locator.waitFor: Timeout 20000ms exceeded.\nCall log:\n  - waiting for locator('//span[contains(text(),\\'Pause\\')]') to be visible\n",
+      "children" : [ {
+        "name" : "Star sand Join Stream",
+        "uid" : "b76a30dbea3b56d7",
+        "parentUid" : "21cbad5734e48e565cc1adbf4b8acd90",
+        "status" : "failed",
+        "time" : {
+          "start" : 1708652734258,
+          "stop" : 1708652792007,
+          "duration" : 57749
+        },
+        "flaky" : true,
+        "newFailed" : true,
+        "parameters" : [ "chromium" ]
+      }, {
+        "name" : "Stoplist - Stream Chat",
+        "uid" : "d7cca2c119a549ce",
+        "parentUid" : "21cbad5734e48e565cc1adbf4b8acd90",
+        "status" : "failed",
+        "time" : {
+          "start" : 1708652842213,
+          "stop" : 1708652883258,
+          "duration" : 41045
+        },
+        "flaky" : true,
+        "newFailed" : true,
+        "parameters" : [ "chromium" ]
+      } ],
+      "uid" : "21cbad5734e48e565cc1adbf4b8acd90"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ],
+  "name" : "categories"
+}
