@@ -37,6 +37,8 @@ jobs:
               env:
                   SLACK_TOKEN: ${{secrets.SLACK_TOKEN}}
                   SLACK_COOKIE: ${{secrets.SLACK_COOKIE}}
+                  MONGO_URL_QA: ${{secrets.MONGO_URL_QA}}
+                  MONGO_URL_PROD: ${{secrets.MONGO_URL_PROD}}
               run: |
                   npx prettier . --write
                   npx playwright test
