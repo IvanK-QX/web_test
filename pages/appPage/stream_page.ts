@@ -1,11 +1,13 @@
-import { Page, expect } from '@playwright/test'
+import { Locator, Page, expect } from '@playwright/test'
 import { apiUrl } from '../../utils/apiUrl'
 
 export class AppStreamPage {
     page: Page
+    streamMessageField: Locator
 
     constructor(page: Page) {
         this.page = page
+        this.streamMessageField = page.getByPlaceholder('Send a message')
     }
 
     async waitForStreamLoadingWatcher() {
@@ -15,7 +17,8 @@ export class AppStreamPage {
     }
 
     async sendMessageInStreamChat(message: string) {
-        await this.page.locator('[placeholder="Send a message…"]').fill(message)
+        await this.page.waitForTimeout(500)
+        await this.streamMessageField.fill(message)
         await this.page.keyboard.press('Enter')
     }
 

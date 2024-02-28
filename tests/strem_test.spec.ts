@@ -16,6 +16,7 @@ streamerAndWatcherFixture.describe('UI Stream Tests With Two Users', async () =>
         await streamer.app.preStreamPage.clickStartStreamBtn()
         await streamer.app.preStreamPage.uploadAvatar()
         await streamer.app.preStreamPage.clickStartStreamBtn()
+        await streamer.page.pause()
         await streamer.app.preStreamPage.observeStream()
         await page.waitForTimeout(1000)
         await watcher.app.mainPage.open()
