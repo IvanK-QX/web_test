@@ -26,7 +26,7 @@ export class AppChatPage {
 
     constructor(page: Page) {
         this.page = page
-        this.chatTextAreaLocator = page.locator('[placeholder="Send a message…"]')
+        this.chatTextAreaLocator = page.getByPlaceholder('Send a message')
         this.mainStatChatBtnLocator = page.locator('button.header-chat__button')
         this.chatSearchFieldLocator = page.locator('[placeholder="Search"]')
         this.createChatBtnLocator = page.locator('button.chat-modal__button')

@@ -1,6 +1,7 @@
-import { Locator, Page } from '@playwright/test'
+import { Locator, Page, expect } from '@playwright/test'
 import { apiUrl } from '../../utils/apiUrl'
 import { texts } from '../../utils/dataSet'
+import { AppPreStreamPage } from './preStream_page'
 
 export class AppProfilePage {
     page: Page
@@ -8,21 +9,21 @@ export class AppProfilePage {
     startStreamBtn: Locator
     folowerCounters: Locator
     coinShopTitle: Locator
-    stremTitleInputField: Locator
     kebabMenuBtn: Locator
     kebabMenuBody: Locator
     editProfileTitle: Locator
     editProfileBtn: Locator
     redeemCashBtn: Locator
     redemCashTitle: Locator
+    preStremPage: AppPreStreamPage
 
     constructor(page: Page) {
         this.page = page
+        this.preStremPage = new AppPreStreamPage(page)
         this.buyCoinsBtn = page.locator('//*[contains(text(),"Buy Coins")]')
         this.startStreamBtn = page.locator('//*[text()=" Start Stream "]')
         this.folowerCounters = page.getByText('0 followers')
         this.coinShopTitle = page.locator('span.coins-shop-modal__title-text')
-        this.stremTitleInputField = page.locator('[placeholder="Stream title"]')
         this.kebabMenuBtn = page.locator('div.context-menu')
         this.kebabMenuBody = page.locator('div.context-menu__body')
         this.editProfileTitle = page.locator('h1.header-title--desktop', {hasText: texts.editProfileTitle})
@@ -57,7 +58,7 @@ export class AppProfilePage {
 
     async clickStartStreamBtn() {
         await this.startStreamBtn.click()
-        await this.stremTitleInputField.waitFor()
+        await expect(this.preStremPage.streamTitleField).toBeVisible()
     }
 
     async clickKebabMenuBtn() {

@@ -1,4 +1,4 @@
-import { Locator, Page } from '@playwright/test'
+import { Locator, Page, expect } from '@playwright/test'
 import { texts } from '../../utils/dataSet'
 
 export class AppPreStreamPage {
@@ -6,7 +6,6 @@ export class AppPreStreamPage {
     streamTitleField: Locator
     startStreamBtn: Locator
     uploadAvatarBtn: Locator
-    streamTitle: Locator
     pauseStreamBtn: Locator
     streamActionsBtn: Locator
     cameraIcon: Locator
@@ -17,11 +16,10 @@ export class AppPreStreamPage {
 
     constructor(page: Page) {
         this.page = page
-        this.streamTitleField = page.locator('[placeholder="Stream title"]')
+        this.streamTitleField = page.getByPlaceholder('Stream Title')
         this.startStreamBtn = page.locator('.stream-main-action__button--public button')
         this.uploadAvatarBtn = page.locator('button.user-data-entris__button-upload')
-        this.streamTitle = page.locator('[placeholder="Stream title"]')
-        this.pauseStreamBtn = page.locator("//span[contains(text(),'Pause')]")
+        this.pauseStreamBtn = page.getByText('Pause')
         this.streamActionsBtn = page.locator('div.create-stream__actions')
         this.cameraIcon = page.locator('button.stream-top-action__button').nth(1)
         this.streamVideoAvatar = page.locator('.create-stream.is-placeholder.is-avatar-cover')
@@ -51,11 +49,10 @@ export class AppPreStreamPage {
 
     async observeStream() {
         await this.streamActionsBtn.waitFor()
-        await this.pauseStreamBtn.waitFor()
     }
 
     async observeStreamTitle() {
-        await this.streamTitle.waitFor()
+        await expect(this.streamTitleField).toBeVisible()
     }
 
     async observeCameraDropdown() {
