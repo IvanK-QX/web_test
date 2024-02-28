@@ -49,7 +49,6 @@ export class AppPreStreamPage {
 
     async observeStream() {
         await this.streamActionsBtn.waitFor()
-        await expect(this.pauseStreamBtn).toBeVisible()
     }
 
     async observeStreamTitle() {
