@@ -38,7 +38,7 @@ export class AppRedeemCashPage {
     }
 
     async clickAddPayoneerBtn() {
-        await this.page.locator(locators.redeemCashPage.addPayoneerBtn).click()
+        await this.page.getByRole('button', { name: 'Add' }).nth(1).click()
     }
 
     async clickAddPaymentBackBtn() {
@@ -93,8 +93,12 @@ export class AppRedeemCashPage {
         }
     }
 
-    async clickPayoutsMoreBtn() {
-        await this.page.locator(locators.redeemCashPage.redeemCashMoreBtn).click()
+    async clickPayoneerMoreBtn() {
+        await this.page.locator(locators.redeemCashPage.payoneerMoreBtn).click()
+    }
+
+    async clickBinanceMoreBtn() {
+        await this.page.locator(locators.redeemCashPage.binanceMoreBtn).click()
     }
 
     async clickPayoutChangeBtn() {
@@ -119,7 +123,7 @@ export class AppRedeemCashPage {
     }
 
     async clickAddBinanceBtn() {
-        await this.page.locator(locators.redeemCashPage.addBinanceBtn).click()
+        await this.page.getByRole('button', { name: 'Add' }).nth(2).click()
     }
 
     async redeemAmountInput(redeemValue: string) {
@@ -150,4 +154,67 @@ export class AppRedeemCashPage {
         const returnedBinanceMethod = result[0].cryptoWallet
         expect(returnedBinanceMethod).toEqual(expectedBinanceWallet)
     }
+
+    async addPaymentMethod({
+        userToken,
+        userEmail,
+        userId,
+        payoneer = '',
+        binance = '',
+        changedPayoneerEmail = '',
+        changedBinanceWallet = '',
+        usersDB,
+    }: {
+        userToken: string
+        userEmail: string
+        userId: string
+        payoneer?: string
+        binance?: string
+        changedPayoneerEmail?: string
+        changedBinanceWallet?: string
+        usersDB: Collection
+    }) {
+        await this.clickAddPaymentMethodBtn()
+
+        if(payoneer) {
+            await this.clickAddPayoneerBtn()
+            await this.enterPayoneerEmail(payoneer)
+            await this.clickAddPaymentSaveBtn()
+            await this.clickAddPaymentOkBtn()  
+            await this.redeemCashPaymentAddedCheck({userToken: userToken, userEmail: userEmail, payoneer: payoneer}); 
+            await this.clickPayoneerMoreBtn()
+            await this.clickPayoutChangeBtn()
+            await this.clickChangePayoutConfirmationChangeBtn()
+            await this.enterPayoneerEmail(changedPayoneerEmail)
+            await this.clickAddPaymentSaveBtn()
+            await this.clickAddPaymentOkBtn() 
+            await this.redeemCashPaymentAddedCheck({userToken: userToken, userEmail: userEmail, payoneer: changedPayoneerEmail})
+            await this.checkPayoneerEmailInMongoDB(usersDB, userId, changedPayoneerEmail)
+        }
+
+        if(binance) {
+            await this.clickAddBinanceBtn()
+            await this.enterBinanceWallet(binance)
+            await this.clickAddPaymentSaveBtn()
+            await this.clickAddPaymentOkBtn()  
+            await this.redeemCashPaymentAddedCheck({userToken: userToken, userEmail: userEmail, binance: binance}); 
+            await this.clickBinanceMoreBtn()
+            await this.clickPayoutChangeBtn()
+            await this.clickChangePayoutConfirmationChangeBtn()
+            await this.enterBinanceWallet(changedBinanceWallet)
+            await this.clickAddPaymentSaveBtn()
+            await this.clickAddPaymentOkBtn() 
+            await this.redeemCashPaymentAddedCheck({userToken: userToken, userEmail: userEmail, binance: changedBinanceWallet}); 
+            await this.checkBinanceWalletInMongoDB(usersDB, userId, changedBinanceWallet)
+        }
+
+    }
+
+    async redeemCash(redeemAmount: string) {
+        await this.redeemAmountInput(redeemAmount)
+        await this.cickRedeemBtn()
+        await this.cickCashOutRedeemBtn()
+        await this.cickCashOutOkBtn()
+    }
 }
+

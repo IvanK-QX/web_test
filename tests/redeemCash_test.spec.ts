@@ -1,11 +1,11 @@
 import { apiUrl } from '../utils/apiUrl'
-import { apiDataSet } from '../utils/dataSet'
 import { mongoDBConnect } from '../dataBase/mongoDB_page'
 import { streamerFixture } from '../fixtures/fixtures'
+import { apiDataSet } from '../utils/dataSet'
 
 let user, usersDB
 
-streamerFixture.describe('UI - Redeem Cash Flow', async () => {
+streamerFixture.describe.only('UI - Redeem Cash Flow', async () => {
     streamerFixture.beforeEach(async ({ streamer }) => {
         user = await streamer.app.loginPage.apiLogin(apiUrl.qaEnvUrl)
         await streamer.app.redeemCashPage.checkDiamondsAmmount(user.diamonds, 9475, user.id)
@@ -18,24 +18,8 @@ streamerFixture.describe('UI - Redeem Cash Flow', async () => {
         await streamer.app.mainPage.clickProfileBtn()
         await streamer.app.redeemCashPage.clickRedeemCashBtn()
         await streamer.app.redeemCashPage.redeemCashTitleCheck()
-        await streamer.app.redeemCashPage.clickAddPaymentMethodBtn()
-        await streamer.app.redeemCashPage.clickAddPayoneerBtn()
-        await streamer.app.redeemCashPage.enterPayoneerEmail(payoneerEmail)
-        await streamer.app.redeemCashPage.clickAddPaymentSaveBtn()
-        await streamer.app.redeemCashPage.clickAddPaymentOkBtn()  
-        await streamer.app.redeemCashPage.redeemCashPaymentAddedCheck({userToken: user.userToken, userEmail: user.email, payoneer: payoneerEmail}); 
-        await streamer.app.redeemCashPage.clickPayoutsMoreBtn()
-        await streamer.app.redeemCashPage.clickPayoutChangeBtn()
-        await streamer.app.redeemCashPage.clickChangePayoutConfirmationChangeBtn()
-        await streamer.app.redeemCashPage.enterPayoneerEmail(changedPayoneerEmail)
-        await streamer.app.redeemCashPage.clickAddPaymentSaveBtn()
-        await streamer.app.redeemCashPage.clickAddPaymentOkBtn() 
-        await streamer.app.redeemCashPage.redeemCashPaymentAddedCheck({userToken: user.userToken, userEmail: user.email, payoneer: changedPayoneerEmail})
-        await streamer.app.redeemCashPage.checkPayoneerEmailInMongoDB(usersDB, user.id, changedPayoneerEmail)
-        await streamer.app.redeemCashPage.redeemAmountInput('25')
-        await streamer.app.redeemCashPage.cickRedeemBtn()
-        await streamer.app.redeemCashPage.cickCashOutRedeemBtn()
-        await streamer.app.redeemCashPage.cickCashOutOkBtn()
+        await streamer.app.redeemCashPage.addPaymentMethod({usersDB: usersDB, userId: user.id, userToken: user.userToken, userEmail: user.userEmail, payoneer: payoneerEmail, changedPayoneerEmail: changedPayoneerEmail})
+        await streamer.app.redeemCashPage.redeemCash('25')
         await streamer.app.redeemCashPage.clickRedeemHistoryBtn()
     })
 
@@ -45,24 +29,8 @@ streamerFixture.describe('UI - Redeem Cash Flow', async () => {
         await streamer.app.mainPage.clickProfileBtn()
         await streamer.app.redeemCashPage.clickRedeemCashBtn()
         await streamer.app.redeemCashPage.redeemCashTitleCheck()
-        await streamer.app.redeemCashPage.clickAddPaymentMethodBtn()
-        await streamer.app.redeemCashPage.clickAddBinanceBtn()
-        await streamer.app.redeemCashPage.enterBinanceWallet(binanceWallet)
-        await streamer.app.redeemCashPage.clickAddPaymentSaveBtn()
-        await streamer.app.redeemCashPage.clickAddPaymentOkBtn()  
-        await streamer.app.redeemCashPage.redeemCashPaymentAddedCheck({userToken: user.userToken, userEmail: user.email, binance: binanceWallet}); 
-        await streamer.app.redeemCashPage.clickPayoutsMoreBtn()
-        await streamer.app.redeemCashPage.clickPayoutChangeBtn()
-        await streamer.app.redeemCashPage.clickChangePayoutConfirmationChangeBtn()
-        await streamer.app.redeemCashPage.enterBinanceWallet(changedBinanceWallet)
-        await streamer.app.redeemCashPage.clickAddPaymentSaveBtn()
-        await streamer.app.redeemCashPage.clickAddPaymentOkBtn() 
-        await streamer.app.redeemCashPage.redeemCashPaymentAddedCheck({userToken: user.userToken, userEmail: user.email, binance: changedBinanceWallet}); 
-        await streamer.app.redeemCashPage.checkBinanceWalletInMongoDB(usersDB, user.id, changedBinanceWallet)
-        await streamer.app.redeemCashPage.redeemAmountInput('25')
-        await streamer.app.redeemCashPage.cickRedeemBtn()
-        await streamer.app.redeemCashPage.cickCashOutRedeemBtn()
-        await streamer.app.redeemCashPage.cickCashOutOkBtn()
+        await streamer.app.redeemCashPage.addPaymentMethod({usersDB: usersDB, userId: user.id, userToken: user.userToken, userEmail: user.userEmail, binance: binanceWallet, changedBinanceWallet: changedBinanceWallet})
+        await streamer.app.redeemCashPage.redeemCash('25')
         await streamer.app.redeemCashPage.clickRedeemHistoryBtn()
     })
 })
