@@ -16,7 +16,6 @@ streamerAndWatcherFixture.describe('UI Tests', async () => {
         await streamer.app.sidePanelPage.clickCreateStreamBtn();
         await streamer.app.preStreamPage.changeStreamTitle();
         await streamer.app.preStreamPage.clickStartStreamBtn();
-        await streamer.page.pause()
         await streamer.app.preStreamPage.uploadAvatar();
         await streamer.app.preStreamPage.clickStartStreamBtn();
         await streamer.app.preStreamPage.observeStream();
