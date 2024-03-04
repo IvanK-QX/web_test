@@ -18,8 +18,8 @@ export class SalaryRulesPayloads {
             timeLimitAmount: 90,
             timeLimitPeriod: 'Days',
             dimondsLimit: 18950,
-        }
-        return query
+        };
+        return query;
     }
 
     static updateRule(myStreamerId: string, botRuleId: string) {
@@ -42,8 +42,8 @@ export class SalaryRulesPayloads {
             timeLimitAmount: 90,
             timeLimitPeriod: 'Days',
             dimondsLimit: 100000,
-        }
-        return query
+        };
+        return query;
     }
 
     static createBotRule(botRuleId: string) {
@@ -61,8 +61,8 @@ export class SalaryRulesPayloads {
                 period: 'Hours',
             },
             sort: 'beginning',
-        }
-        return query
+        };
+        return query;
     }
 
     static updateBotRule(secondBotRuleId: string, botRuleId: string) {
@@ -81,7 +81,7 @@ export class SalaryRulesPayloads {
                 period: 'Hours',
             },
             sort: 'beginning',
-        }
-        return query
+        };
+        return query;
     }
 }

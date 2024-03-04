@@ -6,8 +6,8 @@ export class Headers {
             'content-type': 'application/json',
             appversion: '1',
             os: 'ios',
-        }
-        return headers
+        };
+        return headers;
     }
 
     static guestHeader() {
@@ -16,7 +16,7 @@ export class Headers {
             'content-type': 'application/json',
             appversion: '1',
             os: 'ios',
-        }
-        return headers
+        };
+        return headers;
     }
 }

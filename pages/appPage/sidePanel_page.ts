@@ -1,14 +1,14 @@
-import { Page, expect } from '@playwright/test'
+import { Page, expect } from '@playwright/test';
 
 export class AppSidePanelPage {
-    page: Page
+    page: Page;
 
     constructor(page: Page) {
-        this.page = page
+        this.page = page;
     }
 
     async clickCreateStreamBtn() {
-        await this.page.locator('.sidebar__create button').click()
-        await expect(this.page.locator('div.create-stream__actions')).toBeVisible()
+        await this.page.locator('.sidebar__create button').click();
+        await expect(this.page.locator('div.create-stream__actions')).toBeVisible();
     }
 }

@@ -3,8 +3,8 @@ export class ModerationsPayloads {
         const query = {
             streamerId: `${userId}`,
             itemsPerPage: 100,
-        }
-        return query
+        };
+        return query;
     }
 
     static getUpdatedUsersList(moderatorHumanReadableId: number, humanReadableId: number) {
@@ -13,7 +13,7 @@ export class ModerationsPayloads {
             skip: 0,
             moderatorHumanReadableId: `${moderatorHumanReadableId}`,
             userHumanReadableId: `${humanReadableId}`,
-        }
-        return query
+        };
+        return query;
     }
 }
