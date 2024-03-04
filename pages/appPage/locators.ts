@@ -19,7 +19,7 @@ export const locators = {
     },
     mainPage: {
         profileBtn: '[class="user-dropdown__name"]',
-        redeemCashBtn: '[href="/redeem-cash"]'
+        redeemCashBtn: '[href="/redeem-cash"]',
     },
     referralPage: {
         referralProgramBtn: '[href="/referral"]',
@@ -29,7 +29,6 @@ export const locators = {
         otherUserProfileId: '[class="profile-info__human-id--text"]',
         copyBanner: '[class="notification-global__text body"]',
         myReferralsBtn: '[class="ui-button ui-button"]',
-        myReferralId: '[class="user-simple-card__content--uid"]'
-        
-    }
-}
+        myReferralId: '[class="user-simple-card__content--uid"]',
+    },
+};

@@ -19,7 +19,7 @@ const config: PlaywrightTestConfig = {
         headless: process.env.CI ? true: false || process.env.E2E_HEADLESS === 'true',
         viewport: { width: 1280, height: 720 },
         ignoreHTTPSErrors: true,
-        video: 'retain-on-failure',
+        // video: 'retain-on-failure',
         screenshot: 'only-on-failure',
         trace: 'retain-on-failure',
         actionTimeout: 20000,

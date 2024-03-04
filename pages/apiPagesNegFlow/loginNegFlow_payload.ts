@@ -1,4 +1,4 @@
-import { apiDataSet } from '../../utils/dataSet'
+import { apiDataSet } from '../../utils/dataSet';
 
 export const loginGuestTestCases = [
     {
@@ -64,7 +64,7 @@ export const loginGuestTestCases = [
         testSuite: 'loginGuest',
         case: 'wrongAuthProvider',
     },
-]
+];
 
 export const loginUserTestCases = [
     {
@@ -185,7 +185,7 @@ export const loginUserTestCases = [
         testSuite: 'loginUser',
         case: 'wrongAuthProvider',
     },
-]
+];
 
 export const loginAdminTestCases = [
     {
@@ -260,4 +260,4 @@ export const loginAdminTestCases = [
         testSuite: 'loginAdmin',
         case: 'wrongAuthProvider',
     },
-]
+];

@@ -5,8 +5,8 @@ export class ModetarorPayloads {
             role: 'admin',
             email: `${email}`,
             password: 'password',
-        }
-        return query
+        };
+        return query;
     }
 
     static moderatorLogin(guestUserToken: string, email, deviceId: string) {
@@ -18,8 +18,8 @@ export class ModetarorPayloads {
             deviceId: `${deviceId}`,
             language: 'uk',
             version: 1,
-        }
-        return query
+        };
+        return query;
     }
 
     static adminProfileUpdate(userId: string, action: string, userName: string, payoneerEmail: string) {
@@ -32,8 +32,8 @@ export class ModetarorPayloads {
                 payoutEmail: `${payoneerEmail}`,
                 defaultPaymentMethod: 'payoneerEmail',
             },
-        }
-        return query
+        };
+        return query;
     }
 
     static adminModeratorAction(streamId: string, type: string, reason: string) {
@@ -41,8 +41,8 @@ export class ModetarorPayloads {
             type: `${type}`,
             streamIds: [`${streamId}`],
             reason: `${reason}`,
-        }
-        return query
+        };
+        return query;
     }
 
     static getAdminActionList(streamId: string) {
@@ -51,7 +51,7 @@ export class ModetarorPayloads {
             streamIds: [`${streamId}`],
             skip: 0,
             itemsPerPage: 10,
-        }
-        return query
+        };
+        return query;
     }
 }

@@ -4,8 +4,8 @@ export class NotificationsContentPayloads {
             type: 'giftReceived',
             title: `${contentTitle}`,
             text: `${contentText}`,
-        }
-        return query
+        };
+        return query;
     }
 
     static notificationsContentUpdate(notificationContentId: string, contentTitle: string, contentText: string) {
@@ -14,7 +14,7 @@ export class NotificationsContentPayloads {
             type: 'giftReceived',
             title: `${contentTitle}`,
             text: `${contentText}`,
-        }
-        return query
+        };
+        return query;
     }
 }
